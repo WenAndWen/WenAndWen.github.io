@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/04/22/jsoupTeach/</loc>
-    <lastmod>2018-04-23T10:39:26.627Z</lastmod>
+    <lastmod>2018-04-23T11:02:58.963Z</lastmod>
     <data>
         <display>
         <title>Jsoup使用方法</title>
@@ -13,6 +13,9 @@
         
          
            
+             
+              <breadCrumb title="web前端" url="http://yoursite.com/categories/web%E5%89%8D%E7%AB%AF/"/>
+          
         </display>
     </data>
     </url>
