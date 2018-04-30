@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/04/30/html1/</loc>
+    <lastmod>2018-04-30T08:12:42.231Z</lastmod>
+    <data>
+        <display>
+        <title>HTML基础</title>
+        <pubTime>2018-04-30T08:12:23.262Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="网站设计" url="http://yoursite.com/categories/%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/04/29/devc++/</loc>
     <lastmod>2018-04-29T11:28:42.817Z</lastmod>
     <data>
