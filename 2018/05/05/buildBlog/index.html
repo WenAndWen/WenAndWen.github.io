@@ -43,7 +43,7 @@
     
     <title>
         
-            分类: 网站设计 | 
+            GitHub+Hexo搭建个人博客原创教程 | 
         
         GwrBlog
     </title>
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="GwrBlog">
-    <meta name="msapplication-starturl" content="http://gwrblog.top/categories/网站设计/">
+    <meta name="msapplication-starturl" content="http://gwrblog.top/2018/05/05/buildBlog/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="GwrBlog">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gwrblog.top/categories/网站设计/">
+    <meta property="og:url" content="http://gwrblog.top/2018/05/05/buildBlog/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: 网站设计 | GwrBlog">
+    <meta property="og:title" content="GitHub+Hexo搭建个人博客原创教程 | GwrBlog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
     
 
+    
+        <meta property="article:published_time" content="Sat May 05 2018 20:00:20 GMT+0800">
+        <meta property="article:modified_time" content="Sun May 06 2018 01:40:54 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -244,13 +247,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gwrblog.top/categories/网站设计/index.html" />
+        <link rel="canonical" href="http://gwrblog.top/2018/05/05/buildBlog/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gwrblog.top/2018/05/05/buildBlog/index.html",
+    "headline": "GitHub+Hexo搭建个人博客原创教程",
+    "datePublished": "Sat May 05 2018 20:00:20 GMT+0800",
+    "dateModified": "Sun May 06 2018 01:40:54 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gwr",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "GwrBlog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
 
 
     
@@ -284,98 +317,359 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#GitHub-Hexo-搭建个人博客原创教程"><span class="post-toc-number">1.</span> <span class="post-toc-text">GitHub+Hexo 搭建个人博客原创教程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简要"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">简要</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#工具"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">工具</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/04/30/html1/">HTML基础</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/04/30/html1/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gwr's avatar">
-            </div>
-            <div>
-                <strong>Gwr</strong>
-                <span>4月 30, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/网站设计/">网站设计</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                GitHub+Hexo搭建个人博客原创教程
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gwr</strong>
+        <span>5月 05, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=GitHub+Hexo搭建个人博客原创教程&url=http://gwrblog.top/2018/05/05/buildBlog/index.html&pic=http://gwrblog.top/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=GitHub+Hexo搭建个人博客原创教程&url=http://gwrblog.top/2018/05/05/buildBlog/index.html&via=Gwr" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gwrblog.top/2018/05/05/buildBlog/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gwrblog.top/2018/05/05/buildBlog/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="GitHub-Hexo-搭建个人博客原创教程"><a href="#GitHub-Hexo-搭建个人博客原创教程" class="headerlink" title="GitHub+Hexo 搭建个人博客原创教程"></a>GitHub+Hexo 搭建个人博客原创教程</h1><hr>
+<p>我搭建这个博客走了许多弯路，查看了一大堆的教程。<br>于是乎，我有一个大胆的想法———总结一下我的操作方法及详细的步骤。</p>
+<h2 id="简要"><a href="#简要" class="headerlink" title="简要"></a>简要</h2><blockquote>
+<ul>
+<li>Github Pages</li>
+<li>Hexo 博客框架</li>
+<li>部署（主题）</li>
+</ul>
+</blockquote>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><blockquote>
+<ul>
+<li>Node.js</li>
+<li>Git</li>
+<li>Hexo<br>(使用 Hexo 之前，需要先安装 Node.js 和 Git。)</li>
+</ul>
+</blockquote>
+<p>##详细步骤</p>
+<ol>
+<li><p>安装 Node.js</p>
+<blockquote>
+<ul>
+<li>进入[Node.js下载地址][1]</li>
+<li>安装后，打开 Node.js Command Prompt， 输入 node -v,会得到一个v x.x.x（x是当前版本号）<br>说明安装成功。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>安装git </p>
+<blockquote>
+<ul>
+<li>进入[Git下载地址][1]</li>
+<li>安装后，打开Node.js Command Prompt，输入git –version，会得到git version x.x.x（x是当前版本号）<br>说明安装成功</li>
+</ul>
+</blockquote>
+</li>
+<li><p>安装 Hexo</p>
+<blockquote>
+<ul>
+<li>打开Node.js Command Prompt,输入npm install -g hexo-cli，然后回车开始安装</li>
+<li>等安装完成，输入 hexo -v，会得到 hexo-cli……等一串数据。<br>说明安装成功</li>
+</ul>
+</blockquote>
+</li>
+<li><p>创建文件夹</p>
+<blockquote>
+<ul>
+<li>在任意磁盘创建文件夹<strong>blog</strong></li>
+<li>打开Node.js Command Prompt，输入cd 你的文件夹地址</li>
+<li>输入hexo init,将<strong>blog</strong>文件夹初始化成一个博客文件夹。</li>
+<li>输入 npm install ,安装依赖包。</li>
+<li>输入 hexo g 生成网页。</li>
+<li>输入 hexo s将生成的网页放在了本地服务器。</li>
+<li>浏览器里输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 。 就可以看到一个本地的博客了。</li>
+<li>输入Ctrl+C ，可以结束对<a href="http://localhost:4000/的访问。" target="_blank" rel="noopener">http://localhost:4000/的访问。</a></li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/6285080-24023c0f73e7e4ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="blog地址" title="blog地址"></p>
+<hr>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/T5DXU9OV%60%5BHCC%7D6YCK55_6R.png" alt="dos命令" title="dos命令"></p>
+<hr>
+<p><strong>如果我们想让别人看到我们的博客，我们就需要把它部署到一个主机上。当然，我选择了一个github提供给每个用户的一个免费的空间。</strong></p>
+<ol start="5">
+<li>注册github<blockquote>
+<ul>
+<li>注册一个github的账号（此处我就跳过了，不会注册账号的可以联系我），然后创建一个仓库，仓库的名称格式：你的用户名+.github.io</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/_M0V544%5D_CQS_Y1X1XBCJIJ.png" alt="新建仓库" title="新建仓库"></p>
+<hr>
+<ol start="6">
+<li><p>打开Git Bash，设置user.name和user.email配置信息：<br>输入以下命令</p>
+<blockquote>
+<ul>
+<li>git config –global user.name “你的GitHub用户名”</li>
+<li>git config –global user.email “你的GitHub注册邮箱”</li>
+</ul>
+</blockquote>
+</li>
+<li><p>生成并填写ssh密钥文件：</p>
+<blockquote>
+<ul>
+<li>ssh-keygen -t rsa -C “你的GitHub注册邮箱”</li>
+<li>回车，然后找到生成的.ssh的文件夹中的id_rsa.pub密钥（不知道目录的，回车后，显示的代码中可以看到），把里面的内容全部复制填写到自己的github（用电脑自带的记事本可以打开）。</li>
+<li>进入github，点击右下图所标记的。</li>
+<li>进入SSH keys /Add new后,Title可以随便填写，Key填写的是我们刚才复制的密匙内容。</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/3%5BH%5D5$P5_8D19V%29PB0VRSDT.png" alt="进入设置" title="进入设置"></p>
+<hr>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/_%60ESK0D3R5OLK$X5Q%29%29L%28VO.png" alt="新建SSH key"></p>
+<hr>
+<p><img src="http://upload-images.jianshu.io/upload_images/6285080-a0cd2b95080f1975.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="填写ssh密匙内容" title="填写ssh密匙内容"></p>
+<hr>
+<ol start="8">
+<li>修改博客的配置文件<blockquote>
+<ul>
+<li>打开 /任意磁盘/blog/_config.yml文件 （可以用记事本打开）</li>
+<li>找到 #Deployment，输入以下内容，然后保存：<br>deploy:<br> type: git<br> repository: <a href="https://github.com/你的用户名.io.git" target="_blank" rel="noopener">https://github.com/你的用户名.io.git</a><br> branch: master</li>
+</ul>
+</blockquote>
+</li>
+<li>安装Git部署插件，并且部署到github。<blockquote>
+<ul>
+<li>npm install hexo-deployer-git –save</li>
+<li>hexo clean </li>
+<li>hexo g </li>
+<li>hexo d</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<hr>
+<p>10.绑定域名</p>
+<blockquote>
+<ul>
+<li>购买域名</li>
+<li>解析域名</li>
+</ul>
+</blockquote>
+<p>如果你不想用一个二级域名的话，你可以去阿里云买一个top的域名，因为top的比较便宜，当然土豪可以买.com、.cn<br>我们买了域名后，点击解析。</p>
+<p>解析的内容，记录值是你的github的地址，不知道地址的可以打开Node.js Command Prompt ，输入 <strong>ping 你刚才创建的仓库的地址</strong>，回车后的信息中，你可以看到你的地址。</p>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/jiexi.png" alt="进入解析" title="进入解析"></p>
+<hr>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/%E6%B7%BB%E5%8A%A0%E8%A7%A3%E6%9E%90.png" alt="添加解析" title="添加解析"></p>
+<hr>
+<ol start="11">
+<li>在github设置你的购买的域名<br>settings，设置Custom domain，输入你的域名，然后保存。<br><img src="http://p7lhtaft4.bkt.clouddn.com/3%5BH%5D5$P5_8D19V%29PB0VRSDT.png" alt="进入设置" title="进入设置"></li>
+</ol>
+<hr>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/v2-85ba6dda906f22dea4c03df2b47d994b_r.jpg" alt="在github填写域名" title="在github填写域名"></p>
+<hr>
+<p>进入自己创建的博客文件夹<strong>blog/source</strong>目录下，创建一个记事本文件，输入你购买的域名即可(不建议带有www)。保存后，将后缀名.txt删掉。</p>
+<ol start="12">
+<li>最终部署到github。<blockquote>
+<ul>
+<li>hexo clean</li>
+<li>hexo g</li>
+<li>hexo d</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<p>在浏览器输入你购买的域名就可以直接进入你自己搭建的博客啦。</p>
+<hr>
+<p>作者 [郭小睿]<br>2018 年 05月 06日    </p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/05/02/wxxcx2/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
