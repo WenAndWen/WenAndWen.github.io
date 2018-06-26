@@ -253,7 +253,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Python基础语法"><a href="#Python基础语法" class="headerlink" title="Python基础语法"></a>Python基础语法</h1><p>Python 语言与C 和 Java 等语言有许多相似之处。但是，也存在一些差异。<br>在本章中我们将来学习 Python 的基础语法，让你快速学会 Python 编程。<br>
+        <p>Python 语言与C 和 Java 等语言有许多相似之处。但是，也存在一些差异。<br>在本章中我们将来学习 Python 的基础语法，让你快速学会 Python 编程。<br>
         
           <a class="article-more-a" href="/2018/05/13/python1/#more">more >></a>
         
@@ -329,7 +329,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="GridView与ListView的Adapter"><a href="#GridView与ListView的Adapter" class="headerlink" title="GridView与ListView的Adapter"></a>GridView与ListView的Adapter</h1>
+        <p>GridView与ListView的Adapter</p>
         
           <a class="article-more-a" href="/2018/05/10/asTeach/#more">more >></a>
         
@@ -405,10 +405,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="为控件做监听接口"><a href="#为控件做监听接口" class="headerlink" title="为控件做监听接口"></a>为控件做监听接口</h1>
-        
-          <a class="article-more-a" href="/2018/05/09/android2/#more">more >></a>
-        
+        <a id="more"></a>
+<hr>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Button mBtn1;</span><br><span class="line">    <span class="keyword">private</span> Button mBtn2;</span><br><span class="line">    <span class="keyword">private</span> Button mBtn3;</span><br><span class="line">    <span class="keyword">private</span> Button mBtn4;</span><br><span class="line">    <span class="keyword">private</span> Button mBtn5;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        mBtn1=findViewById(R.id.btn1);</span><br><span class="line">        mBtn2=findViewById(R.id.btn2);</span><br><span class="line">        mBtn3=findViewById(R.id.btn3);</span><br><span class="line">        mBtn4=findViewById(R.id.btn4);</span><br><span class="line">        mBtn5=findViewById(R.id.btn5);</span><br><span class="line">        setOnClick();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setOnClick</span><span class="params">()</span></span>&#123;</span><br><span class="line">        OnClick onClick=<span class="keyword">new</span> OnClick();</span><br><span class="line">        mBtn1.setOnClickListener(onClick);</span><br><span class="line">        mBtn2.setOnClickListener(onClick);</span><br><span class="line">        mBtn3.setOnClickListener(onClick);</span><br><span class="line">        mBtn4.setOnClickListener(onClick);</span><br><span class="line">        mBtn5.setOnClickListener(onClick);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OnClick</span>  <span class="keyword">implements</span> <span class="title">View</span>.<span class="title">OnClickListener</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">switch</span> (v.getId())&#123;</span><br><span class="line">                <span class="keyword">case</span> R.id.btn1:</span><br><span class="line">                    showToast(getResources().getString(R.string.btn_text1));</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> R.id.btn2:</span><br><span class="line">                    showToast(getResources().getString(R.string.btn_text2));</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> R.id.btn3:</span><br><span class="line">                    showToast(getResources().getString(R.string.btn_text3));</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> R.id.btn4:</span><br><span class="line">                    showToast(getResources().getString(R.string.btn_text4));</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> R.id.btn5:</span><br><span class="line">                    showToast(getResources().getString(R.string.btn_text5));</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">default</span>:</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">showToast</span><span class="params">(String msg)</span></span>&#123;</span><br><span class="line">        Toast.makeText(<span class="keyword">this</span>,msg,Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>作者 [郭小睿]<br>2018 年 05月 09日   </p>
+
       
 
       
@@ -481,8 +483,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="PS-破改版"><a href="#PS-破改版" class="headerlink" title="PS 破改版"></a>PS 破改版</h1><hr>
-<p>最近发现一些朋友在学习ps，因为一些版本需要激活，大家经常会在网络寻找直装版、破解版。<br>现在我把这个免序列码的软件分享给大家，可以减去不少朋友在网络上寻找耗费的时间。<br>
+        <p>最近发现一些朋友在学习ps，因为一些版本需要激活，大家经常会在网络寻找直装版、破解版。<br>现在我把这个免序列码的软件分享给大家，可以减去不少朋友在网络上寻找耗费的时间。<br>
         
           <a class="article-more-a" href="/2018/05/08/ps/#more">more >></a>
         
@@ -558,7 +559,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="安卓控件background效果"><a href="#安卓控件background效果" class="headerlink" title="安卓控件background效果"></a>安卓控件background效果</h1><hr>
+        <hr>
 <p>关键词：shape画图，selector点击效果（item），stoke描边，corners设置圆角效果，solid颜色</p>
         
           <a class="article-more-a" href="/2018/05/08/android1/#more">more >></a>
@@ -635,8 +636,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="GitHub-Hexo-搭建个人博客原创教程"><a href="#GitHub-Hexo-搭建个人博客原创教程" class="headerlink" title="GitHub+Hexo 搭建个人博客原创教程"></a>GitHub+Hexo 搭建个人博客原创教程</h1><hr>
-<p>我搭建这个博客走了许多弯路，查看了一大堆的教程。<br>于是乎，我有一个大胆的想法———总结一下我的操作方法及详细的步骤。</p>
+        <p>我搭建这个博客走了许多弯路，查看了一大堆的教程,还请教了一些朋友。<br>于是乎，我有一个大胆的想法———总结一下我的操作方法及详细的步骤。</p>
         
           <a class="article-more-a" href="/2018/05/05/buildBlog/#more">more >></a>
         
@@ -712,11 +712,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="微信小程序项目结构"><a href="#微信小程序项目结构" class="headerlink" title="微信小程序项目结构"></a>微信小程序项目结构</h1><hr>
-<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p><img src="http://p7lhtaft4.bkt.clouddn.com/stxmjg.png" alt="项目结构"><br><img src="http://p7lhtaft4.bkt.clouddn.com/wxxcxjiegou.png" alt="文件后缀与功能"><br><strong>小程序包含一个描述整体程序的 app 和多个描述各自页面的 page。</strong><br>
-        
-          <a class="article-more-a" href="/2018/05/02/wxxcx2/#more">more >></a>
-        
+        <a id="more"></a>
+<h1 id="微信小程序项目结构"><a href="#微信小程序项目结构" class="headerlink" title="微信小程序项目结构"></a>微信小程序项目结构</h1><h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p><img src="http://p7lhtaft4.bkt.clouddn.com/stxmjg.png" alt="项目结构"><br><img src="http://p7lhtaft4.bkt.clouddn.com/wxxcxjiegou.png" alt="文件后缀与功能"><br><strong>小程序包含一个描述整体程序的 app 和多个描述各自页面的 page。</strong></p>
+<h3 id="主体结构"><a href="#主体结构" class="headerlink" title="主体结构"></a>主体结构</h3><p>一个小程序主体部分由三个文件组成，必须放在项目的根目录。<br><br><br><img src="http://p7lhtaft4.bkt.clouddn.com/zhutijg.png" alt="主体结构"></p>
+<h3 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h3><p>一个小程序页面由四个文件组成。<br><br><br><img src="http://p7lhtaft4.bkt.clouddn.com/yemianjg.png" alt="页面结构"></p>
+<p>作者 [郭小睿]<br>2018 年 05月 02日    </p>
+
       
 
       
@@ -789,11 +790,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="微信小程序准备与创建"><a href="#微信小程序准备与创建" class="headerlink" title="微信小程序准备与创建"></a>微信小程序准备与创建</h1><hr>
+        <a id="more"></a>
+<hr>
 <p><img src="http://p7lhtaft4.bkt.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="流程图"></p>
-        
-          <a class="article-more-a" href="/2018/05/02/wxxcx1/#more">more >></a>
-        
+<p>作者 [郭小睿]<br>2018 年 05月 02日    </p>
+
       
 
       
@@ -866,11 +867,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="HTML页面结构"><a href="#HTML页面结构" class="headerlink" title="HTML页面结构"></a>HTML页面结构</h1><hr>
-<p>一个完整的网页包括4个部分：《html》元素、《head》头部元素、《body》元素、《title》标题元素。<br>
-        
-          <a class="article-more-a" href="/2018/04/30/html1/#more">more >></a>
-        
+        <a id="more"></a>
+<h1 id="HTML页面结构"><a href="#HTML页面结构" class="headerlink" title="HTML页面结构"></a>HTML页面结构</h1><p>一个完整的网页包括4个部分：《html》元素、《head》头部元素、《body》元素、《title》标题元素。</p>
+<p><br><br><strong>在阅读中把”《》”当做”&lt;&gt;”看。</strong></p>
+<h2 id="《html》元素"><a href="#《html》元素" class="headerlink" title="《html》元素"></a>《html》元素</h2><p>每个网页中的所有内容都写在这个标签中，这个标签又分为起始标签和结束标签。</p>
+<blockquote>
+<p>《html》文档内容《/html》</p>
+</blockquote>
+<h2 id="《head》头部元素"><a href="#《head》头部元素" class="headerlink" title="《head》头部元素"></a>《head》头部元素</h2><p>这个元素中的内容不会显示在网页中，但是有很多重要的标记。浏览器在读取网页中，都会从这个头部元素中读取信息。</p>
+<blockquote>
+<p>《head》头部内容《/head》</p>
+</blockquote>
+<h2 id="《body》主体元素"><a href="#《body》主体元素" class="headerlink" title="《body》主体元素"></a>《body》主体元素</h2><p>这个元素中所有的内容都会出现在网页中。</p>
+<blockquote>
+<p>《body》页面主体《/body》</p>
+</blockquote>
+<h2 id="《title》标题元素"><a href="#《title》标题元素" class="headerlink" title="《title》标题元素"></a>《title》标题元素</h2><p>这个元素会写在《head》标签中，用来定义页面的标题，因为它在head标签中，所以它不会出现在网页中，只是会被浏览器读取，显示在标签栏。</p>
+<blockquote>
+<p>《title》页面标题《/title》</p>
+</blockquote>
+<h1 id="元信息标签《meta》"><a href="#元信息标签《meta》" class="headerlink" title="元信息标签《meta》"></a>元信息标签《meta》</h1><p>位于头部标签《head》和标题标签《title》之间，它通常用来为搜索引擎定义页面的主题，也可以用来设置页面。meta的两种属性————name 、http-equiv</p>
+<blockquote>
+<p>《meta name=”Generator” contect=”网页生成工具”》 《!–说明网页生成工具–》<br>《meta name=”Keywords” contect=”网页关键字”》  《!–向搜索引擎说明网页的关键字–》<br>《meta name=”Description” contect=”网站的主要内容”》 《!–告诉搜索引擎网页的主要内容》<br>《meta name=”Author” contect=”作者姓名”》 《!–告诉搜索引擎网页制作的作者》<br>《mate name=”Robots” contect=”#”》 《!–定义网页的检索情况和网页上的连接查询情况–》<br><br><br> Robots这里的contect的值共有6种，all、none、index、follow、noindex、nofollow</p>
+</blockquote>
+<hr>
+<p>作者 [郭小睿]<br>2018 年 04月 30日    </p>
+
       
 
       
