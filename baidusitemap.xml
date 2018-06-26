@@ -4,8 +4,44 @@
 
     
   <url>
+    <loc>http://gwrblog.top/2018/05/02/wxxcx2/</loc>
+    <lastmod>2018-06-26T08:39:59.494Z</lastmod>
+    <data>
+        <display>
+        <title>微信小程序项目结构</title>
+        <pubTime>2018-05-02T14:54:35.519Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="wx小程序" url="http://gwrblog.top/categories/wx%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://gwrblog.top/2018/05/02/wxxcx1/</loc>
+    <lastmod>2018-06-26T08:39:31.336Z</lastmod>
+    <data>
+        <display>
+        <title>微信小程序准备与创建</title>
+        <pubTime>2018-05-02T10:51:19.411Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="wx小程序" url="http://gwrblog.top/categories/wx%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://gwrblog.top/2018/04/30/html1/</loc>
-    <lastmod>2018-06-26T08:35:05.602Z</lastmod>
+    <lastmod>2018-06-26T08:38:44.224Z</lastmod>
     <data>
         <display>
         <title>HTML基础</title>
@@ -51,42 +87,6 @@
            
              
               <breadCrumb title="安卓学习" url="http://gwrblog.top/categories/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://gwrblog.top/2018/05/02/wxxcx2/</loc>
-    <lastmod>2018-06-26T08:29:40.290Z</lastmod>
-    <data>
-        <display>
-        <title>微信小程序项目结构</title>
-        <pubTime>2018-05-02T14:54:35.519Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="wx小程序" url="http://gwrblog.top/categories/wx%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://gwrblog.top/2018/05/02/wxxcx1/</loc>
-    <lastmod>2018-06-26T08:29:19.028Z</lastmod>
-    <data>
-        <display>
-        <title>微信小程序准备与创建</title>
-        <pubTime>2018-05-02T10:51:19.411Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="wx小程序" url="http://gwrblog.top/categories/wx%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
           
         </display>
     </data>
