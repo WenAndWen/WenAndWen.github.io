@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>http://gwrblog.top/2018/05/05/buildBlog/</loc>
+    <lastmod>2018-06-26T09:21:54.382Z</lastmod>
+    <data>
+        <display>
+        <title>GitHub+Hexo搭建个人博客原创教程</title>
+        <pubTime>2018-05-05T12:00:20.035Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="技术小记" url="http://gwrblog.top/categories/%E6%8A%80%E6%9C%AF%E5%B0%8F%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://gwrblog.top/2018/06/26/welcome/</loc>
     <lastmod>2018-06-26T08:44:59.130Z</lastmod>
     <data>
@@ -176,24 +194,6 @@
            
              
               <breadCrumb title="工具软件" url="http://gwrblog.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://gwrblog.top/2018/05/05/buildBlog/</loc>
-    <lastmod>2018-06-26T08:27:19.355Z</lastmod>
-    <data>
-        <display>
-        <title>GitHub+Hexo搭建个人博客原创教程</title>
-        <pubTime>2018-05-05T12:00:20.035Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="技术小记" url="http://gwrblog.top/categories/%E6%8A%80%E6%9C%AF%E5%B0%8F%E8%AE%B0/"/>
           
         </display>
     </data>

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gwrblog.top/2018/05/05/buildBlog/</loc>
+    
+    <lastmod>2018-06-26T09:21:54.382Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gwrblog.top/2018/06/26/welcome/</loc>
     
     <lastmod>2018-06-26T08:44:59.130Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>http://gwrblog.top/2018/04/29/devc++/</loc>
     
     <lastmod>2018-06-26T08:27:32.284Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gwrblog.top/2018/05/05/buildBlog/</loc>
-    
-    <lastmod>2018-06-26T08:27:19.355Z</lastmod>
     
   </url>
   
