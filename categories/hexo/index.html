@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://gwrblog.top">
-  <title>GitHub+Hexo搭建个人博客原创教程 | 郭小睿的博客</title>
+  <title>Category: hexo | 郭小睿的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我搭建这个博客走了许多弯路，查看了一大堆的教程,还请教了一些朋友。于是乎，我有一个大胆的想法———总结一下我的操作方法及详细的步骤。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="GitHub+Hexo搭建个人博客原创教程">
-<meta property="og:url" content="http://gwrblog.top/2018/05/05/buildBlog/index.html">
+  <meta name="description" content="爱好折腾的码农">
+<meta property="og:type" content="website">
+<meta property="og:title" content="郭小睿的博客">
+<meta property="og:url" content="http://gwrblog.top/categories/hexo/index.html">
 <meta property="og:site_name" content="郭小睿的博客">
-<meta property="og:description" content="我搭建这个博客走了许多弯路，查看了一大堆的教程,还请教了一些朋友。于是乎，我有一个大胆的想法———总结一下我的操作方法及详细的步骤。">
+<meta property="og:description" content="爱好折腾的码农">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-26T09:25:48.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GitHub+Hexo搭建个人博客原创教程">
-<meta name="twitter:description" content="我搭建这个博客走了许多弯路，查看了一大堆的教程,还请教了一些朋友。于是乎，我有一个大胆的想法———总结一下我的操作方法及详细的步骤。">
+<meta name="twitter:title" content="郭小睿的博客">
+<meta name="twitter:description" content="爱好折腾的码农">
   
     <link rel="alternative" href="/atom.xml" title="郭小睿的博客" type="application/atom+xml">
   
@@ -154,188 +153,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-buildBlog" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      GitHub+Hexo搭建个人博客原创教程
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/05/05/buildmyblog/" class="archive-article-date">
+  	<time datetime="2018-05-05T12:00:20.035Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-05</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/05/05/buildmyblog/">GitHub+Hexo搭建个人博客原创教程</a>
     </h1>
   
 
-        
-        <a href="/2018/05/05/buildBlog/" class="archive-article-date">
-  	<time datetime="2018-05-05T12:00:20.035Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我搭建这个博客走了许多弯路，查看了一大堆的教程,还请教了一些朋友。<br>于是乎，我有一个大胆的想法———总结一下我的操作方法及详细的步骤。</p>
-<a id="more"></a>
-<div data-note-content="" class="show-content"><br>          <div class="show-content-free"><br><br><h2>简要</h2><br><blockquote><br><ul><br><li>Github Pages</li><br><li>Hexo 博客框架</li><br><li>部署（主题）</li><br></ul><br></blockquote><br><h2>工具</h2><br><blockquote><br><ul><br><li>Node.js</li><br><li>Git</li><br><li>Hexo<br><br>(使用 Hexo 之前，需要先安装 Node.js 和 Git。)</li><br></ul><br></blockquote><br><h2>详细步骤</h2><br><ol><br><li>安装 Node.js</li><br></ol><br><blockquote><br><ul><br><li>进入[Node.js下载地址][1]</li><br><li>安装后，打开 Node.js Command Prompt， 输入 node -v,会得到一个v x.x.x（x是当前版本号）<br><br>说明安装成功。</li><br></ul><br></blockquote><br><ol start="2"><br><li>安装git</li><br></ol><br><blockquote><br><ul><br><li>进入[Git下载地址][1]</li><br><li>安装后，打开Node.js Command Prompt，输入git –version，会得到git version x.x.x（x是当前版本号）<br><br>说明安装成功</li><br></ul><br></blockquote><br><ol start="3"><br><li>安装 Hexo</li><br></ol><br><blockquote><br><ul><br><li>打开Node.js Command Prompt,输入npm install -g hexo-cli，然后回车开始安装</li><br><li>等安装完成，输入 hexo -v，会得到 hexo-cli……等一串数据。<br><br>说明安装成功</li><br></ul><br></blockquote><br><ol start="4"><br><li>创建文件夹</li><br></ol><br><blockquote><br><ul><br><li>在任意磁盘创建文件夹<strong>blog</strong><br></li><br><li>打开Node.js Command Prompt，输入cd 你的文件夹地址</li><br><li>输入hexo init,将<strong>blog</strong>文件夹初始化成一个博客文件夹。</li><br><li>输入 npm install ,安装依赖包。</li><br><li>输入 hexo g 生成网页。</li><br><li>输入 hexo s将生成的网页放在了本地服务器。</li><br><li>浏览器里输入 <a href="http://localhost:4000/" target="_blank" rel="nofollow">http://localhost:4000/</a> 。 就可以看到一个本地的博客了。</li><br><li>输入Ctrl+C ，可以结束对<a href="http://localhost:4000/" target="_blank" rel="nofollow">http://localhost:4000/</a>的访问。</li><br></ul><br></blockquote><br><div class="image-package"><br><div class="image-container" style="max-width: 700px; max-height: 368px;"><br><div class="image-container-fill" style="padding-bottom: 52.66%;"></div><br><div class="image-view" data-width="1392" data-height="733"><img data-original-src="//upload-images.jianshu.io/upload_images/6285080-24023c0f73e7e4ad.png" data-original-width="1392" data-original-height="733" data-original-format="image/png" data-original-filesize="85372" class="image-loading" style="cursor: zoom-in;"></div><br></div><br><div class="image-caption">blog地址</div><br></div><br><hr><br><p>[图片上传失败…(image-36024c-1530005045070)]</p><br><hr><br><p><strong>如果我们想让别人看到我们的博客，我们就需要把它部署到一个主机上。当然，我选择了一个github提供给每个用户的一个免费的空间。</strong></p><br><ol start="5"><br><li>注册github</li><br></ol><br><blockquote><br><ul><br><li>注册一个github的账号（此处我就跳过了，不会注册账号的可以联系我），然后创建一个仓库，仓库的名称格式：你的用户名+.github.io</li><br></ul><br></blockquote><br><p>[图片上传失败…(image-e53ea4-1530005045070)]</p><br><hr><br><ol start="6"><br><li>打开Git Bash，设置user.name和user.email配置信息：<br><br>输入以下命令</li><br></ol><br><blockquote><br><ul><br><li>git config –global user.name “你的GitHub用户名”</li><br><li>git config –global user.email “你的GitHub注册邮箱”</li><br></ul><br></blockquote><br><ol start="7"><br><li>生成并填写ssh密钥文件：</li><br></ol><br><blockquote><br><ul><br><li>ssh-keygen -t rsa -C “你的GitHub注册邮箱”</li><br><li>回车，然后找到生成的.ssh的文件夹中的id_rsa.pub密钥（不知道目录的，回车后，显示的代码中可以看到），把里面的内容全部复制填写到自己的github（用电脑自带的记事本可以打开）。</li><br><li>进入github，点击右下图所标记的。</li><br><li>进入SSH keys /Add new后,Title可以随便填写，Key填写的是我们刚才复制的密匙内容。</li><br></ul><br></blockquote><br><p>[图片上传失败…(image-65951d-1530005045070)]</p><br><hr><br><p>[图片上传失败…(image-d33b9c-1530005045070)]</p><br><hr><br><div class="image-package"><br><div class="image-container" style="max-width: 700px; max-height: 533px;"><br><div class="image-container-fill" style="padding-bottom: 51.65%;"></div><br><div class="image-view" data-width="1032" data-height="533"><img data-original-src="//upload-images.jianshu.io/upload_images/6285080-a0cd2b95080f1975.png" data-original-width="1032" data-original-height="533" data-original-format="image/png" data-original-filesize="26914" class="image-loading" style="cursor: zoom-in;"></div><br></div><br><div class="image-caption">填写ssh密匙内容</div><br></div><br><hr><br><ol start="8"><br><li>修改博客的配置文件</li><br></ol><br><blockquote><br><ul><br><li>打开 /任意磁盘/blog/_config.yml文件 （可以用记事本打开）</li><br><li>找到 #Deployment，输入以下内容，然后保存：<br><br>deploy:<br><br>type: git<br><br>repository: <a href="https://github.com/" target="_blank" rel="nofollow">https://github.com/</a>你的用户名.io.git<br><br>branch: master</li><br></ul><br></blockquote><br><ol start="9"><br><li>安装Git部署插件，并且部署到github。</li><br></ol><br><blockquote><br><ul><br><li>npm install hexo-deployer-git –save</li><br><li>hexo clean</li><br><li>hexo g</li><br><li>hexo d</li><br></ul><br></blockquote><br><hr><br><p>10.绑定域名</p><br><blockquote><br><ul><br><li>购买域名</li><br><li>解析域名</li><br></ul><br></blockquote><br><p>如果你不想用一个二级域名的话，你可以去阿里云买一个top的域名，因为top的比较便宜，当然土豪可以买.com、.cn<br><br>我们买了域名后，点击解析。</p><br><p>解析的内容，记录值是你的github的地址，不知道地址的可以打开Node.js Command Prompt ，输入 <strong>ping 你刚才创建的仓库的地址</strong>，回车后的信息中，你可以看到你的地址。</p><br><div class="image-package"><br><div class="image-container" style="max-width: 700px; max-height: 87px;"><br><div class="image-container-fill" style="padding-bottom: 6.09%;"></div><br><div class="image-view" data-width="1428" data-height="87"><img data-original-src="//upload-images.jianshu.io/upload_images/6285080-e12dbe8dcc742443.png" data-original-width="1428" data-original-height="87" data-original-format="image/png" data-original-filesize="10230" class="image-loading" style="cursor: zoom-in;"></div><br></div><br><div class="image-caption">进入解析</div><br></div><br><hr><br><p>[图片上传失败…(image-11b4dc-1530005045070)]</p><br><hr><br><ol start="11"><br><li><br><p>在github设置你的购买的域名<br><br>打开，你刚才创建的仓库，进入settings，设置Custom domain，输入你的域名，然后保存。</p><br><br><br><div class="image-package"><br><div class="image-container" style="max-width: 700px; max-height: 413px;"><br><div class="image-container-fill" style="padding-bottom: 59.03%;"></div><br><div class="image-view" data-width="1528" data-height="902"><img data-original-src="//upload-images.jianshu.io/upload_images/6285080-63a146b71236b9ed.png" data-original-width="1528" data-original-height="902" data-original-format="image/png" data-original-filesize="113342" class="image-loading" style="cursor: zoom-in;"></div><br></div><br><div class="image-caption">进入设置</div><br></div><br></li><br></ol><br><hr><br><div class="image-package"><br><div class="image-container" style="max-width: 700px; max-height: 131px;"><br><div class="image-container-fill" style="padding-bottom: 15.2%;"></div><br><div class="image-view" data-width="862" data-height="131"><img data-original-src="//upload-images.jianshu.io/upload_images/6285080-8b6c526fab777670.png" data-original-width="862" data-original-height="131" data-original-format="image/png" data-original-filesize="12407" class="image-loading" style="cursor: zoom-in;"></div><br></div><br><div class="image-caption">在github填写域名</div><br></div><br><hr><br><p>进入自己创建的博客文件夹<strong>blog/source</strong>目录下，创建一个记事本文件，输入你购买的域名即可(不建议带有www)。保存后，将后缀名.txt删掉。</p><br><ol start="12"><br><li>最终部署到github。</li><br></ol><br><blockquote><br><ul><br><li>hexo clean</li><br><li>hexo g</li><br><li>hexo d</li><br></ul><br></blockquote><br><p>在浏览器输入你购买的域名就可以直接进入你自己搭建的博客啦。</p><br><hr><br><p>作者 [郭小睿]<br><br>2018 年 05月 06日</p><br><br>          </div><br>        </div>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo,博客搭建</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃辣条<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/zhifubao.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixin.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/技术小记//" class="article-tag-list-link color5">技术小记</a>
+        			<a href="/categories/hexo//" class="article-tag-list-link color5">hexo</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://gwrblog.top/2018/05/05/buildBlog/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/05/08/android1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          安卓控件background效果
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/05/02/wxxcx2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">微信小程序项目结构</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -358,10 +240,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
-		isCategory: false,
+		isCategory: true,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
@@ -426,6 +308,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo,博客搭建</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>

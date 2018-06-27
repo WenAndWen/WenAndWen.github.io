@@ -612,19 +612,19 @@
 
 
   
-    <article id="post-buildBlog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-buildmyblog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/05/buildBlog/">GitHub+Hexo搭建个人博客原创教程</a>
+      <a class="article-title" href="/2018/05/05/buildmyblog/">GitHub+Hexo搭建个人博客原创教程</a>
     </h1>
   
 
         
-        <a href="/2018/05/05/buildBlog/" class="archive-article-date">
+        <a href="/2018/05/05/buildmyblog/" class="archive-article-date">
   	<time datetime="2018-05-05T12:00:20.035Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-05</time>
 </a>
         
@@ -633,9 +633,122 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>我搭建这个博客走了许多弯路，查看了一大堆的教程,还请教了一些朋友。<br>于是乎，我有一个大胆的想法———总结一下我的操作方法及详细的步骤。</p>
-        
-          <a class="article-more-a" href="/2018/05/05/buildBlog/#more">more >></a>
-        
+<p><img src="./images/1530075646152.png" alt="blog"></p>
+<h2 id="简要"><a href="#简要" class="headerlink" title="简要"></a>简要</h2><blockquote>
+<ul>
+<li>Github Pages</li>
+<li>Hexo 博客框架</li>
+<li>部署（主题）</li>
+</ul>
+</blockquote>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><blockquote>
+<ul>
+<li>Node.js</li>
+<li>Git</li>
+<li>Hexo</li>
+</ul>
+</blockquote>
+<p><strong>使用 Hexo 之前，需要先安装 Node.js 和 Git.</strong></p>
+<h2 id="详细步骤"><a href="#详细步骤" class="headerlink" title="详细步骤"></a>详细步骤</h2><h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><blockquote>
+<ul>
+<li>进入[Node.js下载地址][1]</li>
+<li>安装后，打开 Node.js Command Prompt， 输入 node -v,会得到一个v x.x.x（x是当前版本号），说明安装成功。</li>
+</ul>
+</blockquote>
+<h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><blockquote>
+<ul>
+<li>进入[Git下载地址]</li>
+<li>安装后，打开Node.js Command Prompt，输入git –version，会得到git version x.x.x（x是当前版本号），说明安装成功。</li>
+</ul>
+</blockquote>
+<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><blockquote>
+<ul>
+<li>打开Node.js Command Prompt,输入npm install -g hexo-cli，然后回车开始安装</li>
+<li>等安装完成，输入 hexo -v，会得到 hexo-cli……等一串数据，说明安装成功。</li>
+</ul>
+</blockquote>
+<h3 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h3><blockquote>
+<ul>
+<li>在任意磁盘创建文件夹blog</li>
+<li>打开Node.js Command Prompt，输入cd 你的文件夹地址</li>
+<li>输入hexo init,将blog文件夹初始化成一个博客文件夹。</li>
+<li>输入 npm install ,安装依赖包。</li>
+<li>输入 hexo g 生成网页。</li>
+<li>输入 hexo s将生成的网页放在了本地服务器。</li>
+<li>浏览器里输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 。 就可以看到一个本地的博客了。</li>
+<li>输入Ctrl+C ，可以结束对<a href="http://localhost:4000/的访问。" target="_blank" rel="noopener">http://localhost:4000/的访问。</a></li>
+</ul>
+</blockquote>
+<p><img src="./images/1530075722976.png" alt="访问预览图"></p>
+<hr>
+<p> <strong>如果我们想让别人看到我们的博客，我们就需要把它部署到一个主机上。当然，我选择了一个github提供给每个用户的一个免费的空间。</strong></p>
+<h3 id="注册github"><a href="#注册github" class="headerlink" title="注册github"></a>注册github</h3><blockquote>
+<ul>
+<li>注册一个github的账号（此处我就跳过了，不会注册账号的可以联系我），然后创建一个仓库，仓库的名称格式：你的用户名+.github.io</li>
+</ul>
+</blockquote>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/_M0V544%5D_CQS_Y1X1XBCJIJ.png" alt="仓库格式"> </p>
+<h3 id="打开Git-Bash，设置user-name和user-email配置信息："><a href="#打开Git-Bash，设置user-name和user-email配置信息：" class="headerlink" title="打开Git Bash，设置user.name和user.email配置信息："></a>打开Git Bash，设置user.name和user.email配置信息：</h3><p>输入以下命令</p>
+<blockquote>
+<ul>
+<li>git config –global user.name “你的GitHub用户名”</li>
+<li>git config –global user.email “你的GitHub注册邮箱”</li>
+</ul>
+</blockquote>
+<h3 id="生成并填写ssh密钥文件："><a href="#生成并填写ssh密钥文件：" class="headerlink" title="生成并填写ssh密钥文件："></a>生成并填写ssh密钥文件：</h3><blockquote>
+<ul>
+<li>ssh-keygen -t rsa -C “你的GitHub注册邮箱”</li>
+<li>然后回车，然后找到生成的.ssh的文件夹中的id_rsa.pub密钥（不知道目录的，回车后，显示的代码中可以看到），把里面的内容全部复制填写到自己的github（用电脑自带的记事本可以打开）。</li>
+<li>进入github，点击右下图所标记的。</li>
+<li>进入SSH keys /Add new后,Title可以随便填写，Key填写的是我们刚才复制的密匙内容。</li>
+</ul>
+</blockquote>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/_%60ESK0D3R5OLK$X5Q%29%29L%28VO.png" alt="添加ssh"></p>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/ssh.png" alt="添加ssh信息"></p>
+<h3 id="修改博客的配置文件"><a href="#修改博客的配置文件" class="headerlink" title="修改博客的配置文件"></a>修改博客的配置文件</h3><blockquote>
+<ul>
+<li>打开 /任意磁盘/blog/_config.yml文件 （可以用记事本打开）</li>
+<li>找到 #Deployment，输入以下内容，然后保存：</li>
+<li>deploy:<br>type: git<br>repository: <a href="https://github.com/你的用户名.io.git" target="_blank" rel="noopener">https://github.com/你的用户名.io.git</a><br>branch: master</li>
+</ul>
+</blockquote>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/blogAddress.png" alt="blog项目结构"></p>
+<h3 id="安装Git部署插件，并且部署到github。"><a href="#安装Git部署插件，并且部署到github。" class="headerlink" title="安装Git部署插件，并且部署到github。"></a>安装Git部署插件，并且部署到github。</h3><blockquote>
+<ul>
+<li>npm install hexo-deployer-git –save</li>
+<li>hexo clean</li>
+<li>hexo g</li>
+<li>hexo d</li>
+<li>完成以上操作，你就可以通过 <a href="http://xxxx.github.io" target="_blank" rel="noopener">http://xxxx.github.io</a> 访问你的博客了。</li>
+</ul>
+</blockquote>
+<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><blockquote>
+<ul>
+<li>购买域名</li>
+<li>解析域名</li>
+</ul>
+</blockquote>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/jiexi.png" alt="进入解析"></p>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/%E6%B7%BB%E5%8A%A0%E8%A7%A3%E6%9E%90.png" alt="解析域名"></p>
+<p>如果你不想用一个二级域名的话，你可以去阿里云买一个top的域名，因为top的比较便宜，当然土豪可以买.com、.cn，我们买了域名后，点击解析。</p>
+<h3 id="在github设置你的购买的域名"><a href="#在github设置你的购买的域名" class="headerlink" title="在github设置你的购买的域名"></a>在github设置你的购买的域名</h3><blockquote>
+<ul>
+<li>打开，你刚才创建的仓库，进入settings，设置Custom domain，输入你的域名，然后保存。</li>
+</ul>
+</blockquote>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/settis.png" alt="进入设置"></p>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/ssss.png" alt="设置域名"></p>
+<p>进入自己创建的博客文件夹blog/source目录下，创建一个记事本文件，输入你购买的域名即可(不建议带有www)。保存后，将后缀名.txt删掉。</p>
+<h3 id="最终一步——部署到github"><a href="#最终一步——部署到github" class="headerlink" title="最终一步——部署到github"></a>最终一步——部署到github</h3><blockquote>
+<ul>
+<li>hexo clean</li>
+<li>hexo g</li>
+<li>hexo d</li>
+</ul>
+</blockquote>
+<p>在浏览器输入你购买的域名，就可以直接进入你自己搭建的博客啦。</p>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/myblog.png" alt="我的博客"></p>
+
       
 
       
@@ -643,13 +756,24 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo,博客搭建</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/技术小记//" class="article-tag-list-link color5">技术小记</a>
+        			<a href="/categories/hexo//" class="article-tag-list-link color5">hexo</a>
         		</li>
       		
 		</ul>
@@ -658,7 +782,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/05/buildBlog/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/05/05/buildmyblog/">展开全文 >></a>
         </p>
       
 
@@ -1011,6 +1135,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo,博客搭建</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
