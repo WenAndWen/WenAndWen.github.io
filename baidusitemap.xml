@@ -5,18 +5,20 @@
     
   <url>
     <loc>http://gwrblog.top/2018/06/27/buildmyblog/</loc>
-    <lastmod>2018-06-27T05:40:54.405Z</lastmod>
+    <lastmod>2018-06-27T05:51:49.175Z</lastmod>
     <data>
         <display>
         <title>使用GitHub+Hexo搭建个人博客教程(原创)</title>
         <pubTime>2018-06-27T05:37:36.375Z</pubTime>
         
+        <tag>hexo</tag>
+         
         <tag>博客搭建</tag>
          
          
            
              
-              <breadCrumb title="技术小记 hexo" url="http://gwrblog.top/categories/%E6%8A%80%E6%9C%AF%E5%B0%8F%E8%AE%B0-hexo/"/>
+              <breadCrumb title="技术小记" url="http://gwrblog.top/categories/%E6%8A%80%E6%9C%AF%E5%B0%8F%E8%AE%B0/"/>
           
         </display>
     </data>
