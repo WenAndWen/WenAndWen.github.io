@@ -175,15 +175,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天我做自己的项目时，突然冒出了一个想法。在TextView控件上显示一个emoji表情，我复制了一个emoji表情粘贴到编辑器上，发现不显示。于是乎，打开了自己的浏览器……</p>
-<p><img src="http://p7lhtaft4.bkt.clouddn.com/emoji.png" alt="emoji表情"></p>
-<p>我找到了这样的一个<a href="https://apps.timwhitlock.info/emoji/tables/unicode" target="_blank" rel="noopener">emoji的网站</a></p>
-<p>我们点击Unicode列，会跳到一个网站，如下图</p>
-<p><img src="http://p7lhtaft4.bkt.clouddn.com/emoji2.png" alt=""><br>我们将Surrogates列中的内容复制下来，我们就可以直接用了，使用方法如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:id</span>=<span class="string">"textview1"</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:text</span>=<span class="string">"\uD83D\uDE01"</span></span></span><br></pre></td></tr></table></figure>
-<p><img src="http://p7lhtaft4.bkt.clouddn.com/emojiMobliePic.jpg" alt="测试图"></p>
-<p>有人说，可以让TextView加载图片啊。但是，我个人觉得使用字符串的话当然比使用图片更能减小安装包的体积。</p>
-
+        <p>今天我做自己的项目时，突然冒出了一个想法。在TextView控件上显示一个emoji表情，我复制了一个emoji表情粘贴到编辑器上，发现不显示。于是乎，打开了自己的浏览器……<br>
+        
+          <a class="article-more-a" href="/2018/06/29/android_emoji/#more">more >></a>
+        
       
 
       
