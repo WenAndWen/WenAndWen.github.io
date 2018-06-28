@@ -6,21 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://gwrblog.top">
-  <title>微信小程序准备与创建 | 郭小睿的博客</title>
+  <title>TextView加载emoji表情 | 郭小睿的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近朋友问我，你会做微信小程序吗？">
+  <meta name="description" content="今天我做自己的项目时，突然冒出了一个想法。在TextView控件上显示一个emoji表情，我复制了一个emoji表情粘贴到编辑器上，发现不显示。于是乎，打开了自己的浏览器……  我找到了这样的一个emoji的网站 我们点击Unicode列，会跳到一个网站，如下图 我们将Surrogates列中的内容复制下来，我们就可以直接用了，使用方法如下： 12345&amp;lt;TextView	android:i">
+<meta name="keywords" content="-安卓">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信小程序准备与创建">
-<meta property="og:url" content="http://gwrblog.top/2018/05/02/wxxcx1/index.html">
+<meta property="og:title" content="TextView加载emoji表情">
+<meta property="og:url" content="http://gwrblog.top/2018/06/29/android_emoji/index.html">
 <meta property="og:site_name" content="郭小睿的博客">
-<meta property="og:description" content="最近朋友问我，你会做微信小程序吗？">
+<meta property="og:description" content="今天我做自己的项目时，突然冒出了一个想法。在TextView控件上显示一个emoji表情，我复制了一个emoji表情粘贴到编辑器上，发现不显示。于是乎，打开了自己的浏览器……  我找到了这样的一个emoji的网站 我们点击Unicode列，会跳到一个网站，如下图 我们将Surrogates列中的内容复制下来，我们就可以直接用了，使用方法如下： 12345&amp;lt;TextView	android:i">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
-<meta property="og:updated_time" content="2018-06-26T08:39:31.336Z">
+<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/emoji.png">
+<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/emoji2.png">
+<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/emojiMobliePic.jpg">
+<meta property="og:updated_time" content="2018-06-28T16:07:49.674Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信小程序准备与创建">
-<meta name="twitter:description" content="最近朋友问我，你会做微信小程序吗？">
-<meta name="twitter:image" content="http://p7lhtaft4.bkt.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
+<meta name="twitter:title" content="TextView加载emoji表情">
+<meta name="twitter:description" content="今天我做自己的项目时，突然冒出了一个想法。在TextView控件上显示一个emoji表情，我复制了一个emoji表情粘贴到编辑器上，发现不显示。于是乎，打开了自己的浏览器……  我找到了这样的一个emoji的网站 我们点击Unicode列，会跳到一个网站，如下图 我们将Surrogates列中的内容复制下来，我们就可以直接用了，使用方法如下： 12345&amp;lt;TextView	android:i">
+<meta name="twitter:image" content="http://p7lhtaft4.bkt.clouddn.com/emoji.png">
   
     <link rel="alternative" href="/atom.xml" title="郭小睿的博客" type="application/atom+xml">
   
@@ -156,30 +159,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-wxxcx1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-android_emoji" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      微信小程序准备与创建
+      TextView加载emoji表情
     </h1>
   
 
         
-        <a href="/2018/05/02/wxxcx1/" class="archive-article-date">
-  	<time datetime="2018-05-02T10:51:19.411Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
+        <a href="/2018/06/29/android_emoji/" class="archive-article-date">
+  	<time datetime="2018-06-28T16:07:15.165Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近朋友问我，你会做微信小程序吗？<br><a id="more"></a></p>
-<hr>
-<p><img src="http://p7lhtaft4.bkt.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="流程图"></p>
-<p>作者 [郭小睿]<br>2018 年 05月 02日    </p>
+        <p>今天我做自己的项目时，突然冒出了一个想法。在TextView控件上显示一个emoji表情，我复制了一个emoji表情粘贴到编辑器上，发现不显示。于是乎，打开了自己的浏览器……</p>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/emoji.png" alt="emoji表情"></p>
+<p>我找到了这样的一个<a href="https://apps.timwhitlock.info/emoji/tables/unicode" target="_blank" rel="noopener">emoji的网站</a></p>
+<p>我们点击Unicode列，会跳到一个网站，如下图</p>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/emoji2.png" alt=""><br>我们将Surrogates列中的内容复制下来，我们就可以直接用了，使用方法如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:id</span>=<span class="string">"textview1"</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:text</span>=<span class="string">"\uD83D\uDE01"</span></span></span><br></pre></td></tr></table></figure>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/emojiMobliePic.jpg" alt="测试图"></p>
+<p>有人说，可以让TextView加载图片啊。但是，我个人觉得使用字符串的话当然比使用图片更能减小安装包的体积。</p>
 
       
 
@@ -219,18 +226,18 @@
     <div class="article-info article-info-index">
       
       
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/wx小程序//" class="article-tag-list-link color1">wx小程序</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-安卓</a>
         		</li>
       		
 		</ul>
 	</div>
 
+      
 
       
 
@@ -280,7 +287,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://gwrblog.top/2018/05/02/wxxcx1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://gwrblog.top/2018/06/29/android_emoji/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -294,18 +301,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/02/wxxcx2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          微信小程序项目结构
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/04/30/html1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HTML基础</div>
+    <a href="/2018/06/27/buildmyblog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用GitHub+Hexo搭建个人博客教程(原创)</div>
       <i class="icon-circle-right"></i>
     </a>
   
