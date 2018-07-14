@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://gwrblog.top">
-  <title>郭小睿的博客</title>
+  <title>Java语言与面向对象的程序设计 | 郭小睿的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="爱好折腾的码农">
-<meta property="og:type" content="website">
-<meta property="og:title" content="郭小睿的博客">
-<meta property="og:url" content="http://gwrblog.top/page/2/index.html">
+  <meta name="description" content="这几天很迷茫，听老师介绍了一款软件~中国大学MOOC。刚好我是软件专业的学生，索性听了北京大学老师的一节关于Java的讲课，果断被震撼到了，他们的讲课给人一种很深刻(深入)的感觉。我今天就把老师讲到的东西记了下来，以便于有兴趣的朋友阅读…">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java语言与面向对象的程序设计">
+<meta property="og:url" content="http://gwrblog.top/2018/07/14/java1.0/index.html">
 <meta property="og:site_name" content="郭小睿的博客">
-<meta property="og:description" content="爱好折腾的码农">
+<meta property="og:description" content="这几天很迷茫，听老师介绍了一款软件~中国大学MOOC。刚好我是软件专业的学生，索性听了北京大学老师的一节关于Java的讲课，果断被震撼到了，他们的讲课给人一种很深刻(深入)的感觉。我今天就把老师讲到的东西记了下来，以便于有兴趣的朋友阅读…">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/javarunandcomplieliucheng.jpg">
+<meta property="og:updated_time" content="2018-07-14T13:30:43.760Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="郭小睿的博客">
-<meta name="twitter:description" content="爱好折腾的码农">
+<meta name="twitter:title" content="Java语言与面向对象的程序设计">
+<meta name="twitter:description" content="这几天很迷茫，听老师介绍了一款软件~中国大学MOOC。刚好我是软件专业的学生，索性听了北京大学老师的一节关于Java的讲课，果断被震撼到了，他们的讲课给人一种很深刻(深入)的感觉。我今天就把老师讲到的东西记了下来，以便于有兴趣的朋友阅读…">
+<meta name="twitter:image" content="http://p7lhtaft4.bkt.clouddn.com/javarunandcomplieliucheng.jpg">
   
     <link rel="alternative" href="/atom.xml" title="郭小睿的博客" type="application/atom+xml">
   
@@ -153,64 +157,394 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-android1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-java1.0" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/08/android1/">安卓控件background效果</a>
+    <h1 class="article-title" itemprop="name">
+      Java语言与面向对象的程序设计
     </h1>
   
 
         
-        <a href="/2018/05/08/android1/" class="archive-article-date">
-  	<time datetime="2018-05-08T13:19:48.671Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-08</time>
+        <a href="/2018/07/14/java1.0/" class="archive-article-date">
+  	<time datetime="2018-07-14T13:22:17.160Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>关键词：shape画图，selector点击效果（item），stoke描边，corners设置圆角效果，solid颜色</p>
-        
-          <a class="article-more-a" href="/2018/05/08/android1/#more">more >></a>
-        
+        <p>这几天很迷茫，听老师介绍了一款软件~中国大学MOOC。刚好我是软件专业的学生，索性听了北京大学老师的一节关于Java的讲课，果断被震撼到了，他们的讲课给人一种很深刻(深入)的感觉。我今天就把老师讲到的东西记了下来，以便于有兴趣的朋友阅读…<br><a id="more"></a></p>
+<p><strong>Java</strong>分为三大平台</p>
+<blockquote>
+<ul>
+<li>Java SE 标准版</li>
+<li>Java EE 企业版</li>
+<li>Java ME 微型版</li>
+</ul>
+</blockquote>
+<p>Java的开发工具包 JDK（Java Development Kit）</p>
+<p>Java的推动力：JCP与JSR</p>
+<p>Java是一种编程语言</p>
+<blockquote>
+<ul>
+<li>它是一种面向对象的编程语言（OOP）</li>
+<li>它的语法结构与C和C++语言极为相似</li>
+<li>Java所用的语法十分简单</li>
+</ul>
+</blockquote>
+<h2 id="Java的特点"><a href="#Java的特点" class="headerlink" title="Java的特点"></a>Java的特点</h2><blockquote>
+<ul>
+<li>简单一些</li>
+<li>面向对象</li>
+<li>平台无关性</li>
+<li>安全稳定</li>
+<li>支持多线程</li>
+</ul>
+</blockquote>
+<h2 id="丰富的类库"><a href="#丰富的类库" class="headerlink" title="丰富的类库"></a>丰富的类库</h2><p>Java提供了大量的类以满足网络化、多线程、面向对象的系统需要</p>
+<blockquote>
+<ul>
+<li>语言包(package)</li>
+<li>实用程序包</li>
+<li>I/O包</li>
+<li>网络包</li>
+<li>图形用户界面包</li>
+<li>And More…</li>
+</ul>
+</blockquote>
+<hr>
+<p>Q：Java 可以干什么<br>A：如下</p>
+<blockquote>
+<ul>
+<li>面向对象的应用开发</li>
+<li>各类网络应用程序的开发</li>
+<li>计算过程的可视化</li>
+<li>动态界面/交互操作</li>
+<li>Internet的系统管理</li>
+<li>数据库操作</li>
+<li>And More…</li>
+</ul>
+</blockquote>
+<p>Java是C++–</p>
+<blockquote>
+<ul>
+<li>无直接指针操作</li>
+<li>自动内存管理</li>
+<li>数据类型长度固定</li>
+<li>不用头文件</li>
+<li>不包括结构和联合</li>
+<li>不支持宏</li>
+<li>不支持多重继承</li>
+<li>无类外全局变量</li>
+<li>无GOTO</li>
+</ul>
+</blockquote>
+<h2 id="Java运行机制"><a href="#Java运行机制" class="headerlink" title="Java运行机制"></a>Java运行机制</h2><p>Java三种核心机制</p>
+<blockquote>
+<ul>
+<li>Java虚拟机(JVM)</li>
+<li>代码安全性检测(Code Security)</li>
+<li>垃圾收集机制(Garbage Collection)</li>
+</ul>
+</blockquote>
+<h2 id="Java的编译与运行"><a href="#Java的编译与运行" class="headerlink" title="Java的编译与运行"></a>Java的编译与运行</h2><p><img src="http://p7lhtaft4.bkt.clouddn.com/javarunandcomplieliucheng.jpg" alt="java的编译与运行流程"></p>
+<h2 id="Java虚拟机-JVM"><a href="#Java虚拟机-JVM" class="headerlink" title="Java虚拟机(JVM)"></a>Java虚拟机(JVM)</h2><blockquote>
+<ul>
+<li>在一台计算机上由软件或硬件模拟的计算机。</li>
+<li>Java虚拟机(JVM)读取并处理经编译过的字节码class文件。<blockquote>
+<ul>
+<li>Java虚拟机规范定义了：<blockquote>
+<ul>
+<li>指令集</li>
+<li>寄存器集</li>
+<li>类文件结构</li>
+<li>栈堆</li>
+<li>垃圾回收堆</li>
+<li>内存区域</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h2 id="Java运行环境-JRE"><a href="#Java运行环境-JRE" class="headerlink" title="Java运行环境(JRE)"></a>Java运行环境(JRE)</h2><blockquote>
+<ul>
+<li>JRE(The Java Runtime Environment)</li>
+<li>JRE = JVM+API(Lib)</li>
+<li>JRE运行程序时的三项主要功能：<blockquote>
+<ul>
+<li>加载代码：由class loader完成；</li>
+<li>校验代码：由bytecode verifier完成；</li>
+<li>执行代码：由runtime interpreter完成。</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h2 id="Java自动垃圾回收技术"><a href="#Java自动垃圾回收技术" class="headerlink" title="Java自动垃圾回收技术"></a>Java自动垃圾回收技术</h2><blockquote>
+<ul>
+<li>垃圾回收(garbage collection)</li>
+<li>在C/C++等语言中，由程序员负责回收无用内存</li>
+<li>Java语言自动垃圾回收<blockquote>
+<ul>
+<li>系统级线程跟踪存储空间的分配情况</li>
+<li>在JVM的空间时，检查并释放那些可被释放的存储器空间</li>
+<li>程序员无须也无法精确控制和干预该回收过程</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h2 id="JDK-Java开发工具包"><a href="#JDK-Java开发工具包" class="headerlink" title="JDK(Java开发工具包)"></a>JDK(Java开发工具包)</h2><p>JDK = JRE+Tools<br>JRE(运行环境) = JVM+API</p>
+<h2 id="JDK下载"><a href="#JDK下载" class="headerlink" title="JDK下载"></a>JDK下载</h2><blockquote>
+<ul>
+<li>要开发Java程序,要下载JDK<blockquote>
+<ul>
+<li><a href="http://java.sum.com" target="_blank" rel="noopener">http://java.sum.com</a></li>
+<li>可以只下载JavaSE</li>
+</ul>
+</blockquote>
+</li>
+<li>注意:如果只运行Java程序，则只下载JRE<blockquote>
+<ul>
+<li><a href="http://java.com" target="_blank" rel="noopener">http://java.com</a></li>
+</ul>
+</blockquote>
+</li>
+<li>JDK提供的工具<blockquote>
+<ul>
+<li>java编译器 javac.exe</li>
+<li>java执行器 java.exe</li>
+<li>文档生成器 javadoc.exe</li>
+<li>java打包器 jar.exe</li>
+<li>java调试器 jdb.exe</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h2 id="面向对象程序设计"><a href="#面向对象程序设计" class="headerlink" title="面向对象程序设计"></a>面向对象程序设计</h2><h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>对象具有两方面的含义:</p>
+<blockquote>
+<ul>
+<li>在现实生活中:<blockquote>
+<ul>
+<li>是客观世界中的一个实体</li>
+</ul>
+</blockquote>
+</li>
+<li>在计算机世界中：<blockquote>
+<ul>
+<li>是一个可标识的存储区域</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h3 id="类-class"><a href="#类-class" class="headerlink" title="类(class)"></a>类(class)</h3><blockquote>
+<ul>
+<li>类：具有共同属性和行为的对象集合<blockquote>
+<ul>
+<li>属性：变量(字段 field)</li>
+<li>行为：函数(方法 method)</li>
+</ul>
+</blockquote>
+</li>
+<li>类与对象的关系<blockquote>
+<ul>
+<li>类是对象的抽象(模板)</li>
+<li>对象是类的<strong>实例</strong></li>
+</ul>
+</blockquote>
+</li>
+<li>注：类和对象有时候都统称为“对象”，为了明确起见，后者称为“对象实例”。</li>
+</ul>
+</blockquote>
+<p>Person类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">	String name;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>对象实例化<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Person person = <span class="keyword">new</span> Person();</span><br></pre></td></tr></table></figure></p>
+<h2 id="面向对象的三大特征"><a href="#面向对象的三大特征" class="headerlink" title="面向对象的三大特征"></a>面向对象的三大特征</h2><blockquote>
+<ul>
+<li>封装性</li>
+<li>继承性</li>
+<li>多态性</li>
+</ul>
+</blockquote>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>模块化：将属性和行为封装在类中，程序定义很多类。<br>信息隐蔽：将类的细节部分隐藏起来，用户只通过受保护的接口访问某个类。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> age;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">		age=a;</span><br><span class="line">	&#125;</span><br><span class="line">	String name;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="继承-inheritance"><a href="#继承-inheritance" class="headerlink" title="继承(inheritance)"></a>继承(inheritance)</h3><blockquote>
+<ul>
+<li>继承性<blockquote>
+<ul>
+<li>父类和子类之间共享数据和方法</li>
+</ul>
+</blockquote>
+</li>
+<li>继承的好处<blockquote>
+<ul>
+<li>更好的进行抽象与分类</li>
+<li>增强代码的重用性</li>
+<li>提高可维护性</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<p>父类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">	String name;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>子类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">	String school;</span><br><span class="line">	<span class="keyword">double</span> score;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">meetTeacher</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="多态性"><a href="#多态性" class="headerlink" title="多态性"></a>多态性</h2><blockquote>
+<ul>
+<li>多态<blockquote>
+<ul>
+<li>不同的对象收到同一个消息(调用方法)可产生完全不同的效果</li>
+<li>实现的细节则由接受对象自行决定</li>
+<li>例 foo(Person p ){ p.sayHello(); }</li>
+<li>foo( new Student() );</li>
+<li>foo( new Teacher() );</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h2 id="面向对象设计思想的要点"><a href="#面向对象设计思想的要点" class="headerlink" title="面向对象设计思想的要点"></a>面向对象设计思想的要点</h2><blockquote>
+<ul>
+<li>认为客观世界由各种对象组成</li>
+<li>程序的分析和设计都围绕着<blockquote>
+<ul>
+<li>有哪些对象类</li>
+<li>每个类有哪些属性、哪些方法</li>
+<li>类之间的关系(继承、关联等)</li>
+<li>对象之间发送消息(调用方法)</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃辣条<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
       
       
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/安卓学习//" class="article-tag-list-link color5">安卓学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
 	</div>
 
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/08/android1/">展开全文 >></a>
-        </p>
       
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://gwrblog.top/2018/07/14/java1.0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/05/json_music/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java 解析json字符串</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -230,468 +564,14 @@
 
 
 
-
-  
-    <article id="post-wxxcx2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/02/wxxcx2/">微信小程序项目结构</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/02/wxxcx2/" class="archive-article-date">
-  	<time datetime="2018-05-02T14:54:35.519Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>简要概括，微信小程序的项目结构</p>
-        
-          <a class="article-more-a" href="/2018/05/02/wxxcx2/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/wx小程序//" class="article-tag-list-link color1">wx小程序</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/02/wxxcx2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-wxxcx1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/02/wxxcx1/">微信小程序准备与创建</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/02/wxxcx1/" class="archive-article-date">
-  	<time datetime="2018-05-02T10:51:19.411Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近朋友问我，你会做微信小程序吗？<br>
-        
-          <a class="article-more-a" href="/2018/05/02/wxxcx1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/wx小程序//" class="article-tag-list-link color1">wx小程序</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/02/wxxcx1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-html1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/30/html1/">HTML基础</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/30/html1/" class="archive-article-date">
-  	<time datetime="2018-04-30T08:12:23.262Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近接触了Html和css，刚入门，就记录了一些笔记。<br>
-        
-          <a class="article-more-a" href="/2018/04/30/html1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/网站设计//" class="article-tag-list-link color5">网站设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/30/html1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-devc++" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/29/devc++/">Dev c++破改版</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/29/devc++/" class="archive-article-date">
-  	<time datetime="2018-04-29T10:39:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>好多同学、网友在做c语言学习，因为学校的教学、考试都是基于<strong>Dev C++</strong>的，大家经常会在网络上下载到很多垃圾文件或需要序列码的。 现在我把这个免序列码的软件分享给大家，可以减去不少朋友在网络上寻找耗费的时间。</p>
-        
-          <a class="article-more-a" href="/2018/04/29/devc++/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/工具软件//" class="article-tag-list-link color5">工具软件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/29/devc++/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-baofengjihuo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/27/baofengjihuo/">免费激活office组套办公软件</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/27/baofengjihuo/" class="archive-article-date">
-  	<time datetime="2018-04-27T12:02:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我理解大家应该需要激活自己电脑上的office办公软件，整理数据、编辑文档，<strong>暴风激活</strong> 是我们给出的答案 —— 我们为记录思想和分享知识提供更专业的工具。 您可以使用 暴风激活：<br>
-        
-          <a class="article-more-a" href="/2018/04/27/baofengjihuo/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/工具软件//" class="article-tag-list-link color5">工具软件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/27/baofengjihuo/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-jsoupTeach" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/22/jsoupTeach/">Jsoup使用方法</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/22/jsoupTeach/" class="archive-article-date">
-  	<time datetime="2018-04-22T07:40:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>使用jsoup轻量化web爬虫获取小刀娱乐网某区域数据。</p>
-        
-          <a class="article-more-a" href="/2018/04/22/jsoupTeach/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术小记//" class="article-tag-list-link color5">技术小记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/22/jsoupTeach/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -718,8 +598,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
