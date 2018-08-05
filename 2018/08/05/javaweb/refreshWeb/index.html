@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://gwrblog.top">
-  <title>Glide 加载图片回调方法与控件匀速旋转 | 郭小睿的博客</title>
+  <title>案例-网页的自动刷新 | 郭小睿的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天做一个需求——加载网络图后使控件一直匀速旋转，本来我给控件设置了动画，发现等图片加载出来，控件就不旋转了。后来发现，等得图片加载完后，再启动动画就可以了。">
-<meta name="keywords" content="安卓,glide,动画">
+  <meta name="description" content="通过JSP自动刷新网页">
+<meta name="keywords" content="servlet,网页刷新,JSP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Glide 加载图片回调方法与控件匀速旋转">
-<meta property="og:url" content="http://gwrblog.top/2018/07/15/glide/index.html">
+<meta property="og:title" content="案例-网页的自动刷新">
+<meta property="og:url" content="http://gwrblog.top/2018/08/05/javaweb/refreshWeb/index.html">
 <meta property="og:site_name" content="郭小睿的博客">
-<meta property="og:description" content="今天做一个需求——加载网络图后使控件一直匀速旋转，本来我给控件设置了动画，发现等图片加载出来，控件就不旋转了。后来发现，等得图片加载完后，再启动动画就可以了。">
+<meta property="og:description" content="通过JSP自动刷新网页">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-15T09:43:25.373Z">
+<meta property="og:updated_time" content="2018-08-05T10:29:10.629Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Glide 加载图片回调方法与控件匀速旋转">
-<meta name="twitter:description" content="今天做一个需求——加载网络图后使控件一直匀速旋转，本来我给控件设置了动画，发现等图片加载出来，控件就不旋转了。后来发现，等得图片加载完后，再启动动画就可以了。">
+<meta name="twitter:title" content="案例-网页的自动刷新">
+<meta name="twitter:description" content="通过JSP自动刷新网页">
   
     <link rel="alternative" href="/atom.xml" title="郭小睿的博客" type="application/atom+xml">
   
@@ -155,27 +155,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-glide" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-javaweb/refreshWeb" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Glide 加载图片回调方法与控件匀速旋转
+      案例-网页的自动刷新
     </h1>
   
 
         
-        <a href="/2018/07/15/glide/" class="archive-article-date">
-  	<time datetime="2018-07-15T09:34:23.955Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-15</time>
+        <a href="/2018/08/05/javaweb/refreshWeb/" class="archive-article-date">
+  	<time datetime="2018-08-05T10:21:58.158Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天做一个需求——加载网络图后使控件一直匀速旋转，本来我给控件设置了动画，发现等图片加载出来，控件就不旋转了。后来发现，等得图片加载完后，再启动动画就可以了。<br><a id="more"></a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Glide.with(mContext)</span><br><span class="line">                        .load(url).listener(<span class="keyword">new</span> RequestListener&lt;Drawable&gt;() &#123;</span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onLoadFailed</span><span class="params">(@Nullable GlideException e, Object model, Target&lt;Drawable&gt; target, <span class="keyword">boolean</span> isFirstResource)</span> </span>&#123;</span><br><span class="line">                        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onResourceReady</span><span class="params">(Drawable resource, Object model, Target&lt;Drawable&gt; target, DataSource dataSource, <span class="keyword">boolean</span> isFirstResource)</span> </span>&#123;</span><br><span class="line">                        showAnimation(music_message_music_iv);</span><br><span class="line">                        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;)</span><br><span class="line">                        .into(music_message_music_iv);</span><br><span class="line"><span class="comment">//动画</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">showAnimation</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">        Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.img_animation);</span><br><span class="line">        LinearInterpolator lin = <span class="keyword">new</span> LinearInterpolator();<span class="comment">//设置动画匀速运动</span></span><br><span class="line">        animation.setInterpolator(lin);</span><br><span class="line">        view.startAnimation(animation);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+        <p>通过JSP自动刷新网页<br><a id="more"></a><br>RefreshServlet.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> net.wen.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 网页的自动刷新</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet</span>(name = <span class="string">"RefreshServlet"</span>,urlPatterns = <span class="string">"/refresh"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RefreshServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        <span class="comment">//&lt;meta http-equiv='refresh' content='3;url=/hello/home.html'&gt;JSP中通过meta标签实现自动刷新，模仿一个http的响应头</span></span><br><span class="line">        String message = <span class="string">"&lt;meta http-equiv='refresh' content='3;url=/hello/home.html'&gt;3秒后会跳转到首页，如果没有跳转，请点击&lt;a href='/hello/home.html'&gt;跳转链接&lt;/a&gt;"</span>;</span><br><span class="line">        request.setAttribute(<span class="string">"message"</span>,message);</span><br><span class="line">        request.getRequestDispatcher(<span class="string">"/index.jsp"</span>).forward(request,response);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">RefreshDemo1</span><span class="params">(HttpServletResponse response)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        response.setContentType(<span class="string">"text/html;charset=utf-8"</span>);</span><br><span class="line">        <span class="comment">//通过refresh响应头头，可以定时刷新</span></span><br><span class="line">        response.setHeader(<span class="string">"refresh"</span>,<span class="string">"3;url='/hello/home.html"</span>);</span><br><span class="line">        response.getWriter().write(<span class="string">"3秒后刷新"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>index.jsp<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;%--</span><br><span class="line">  Created by IntelliJ IDEA.</span><br><span class="line">  User: wen</span><br><span class="line">  Date: <span class="number">2018</span>/<span class="number">8</span>/<span class="number">2</span></span><br><span class="line">  Time: <span class="number">17</span>:<span class="number">34</span></span><br><span class="line">  To change <span class="keyword">this</span> template use File | Settings | File Templates.</span><br><span class="line">--%&gt;</span><br><span class="line">&lt;%@ page contentType=<span class="string">"text/html;charset=UTF-8"</span> language=<span class="string">"java"</span> %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;$Title$&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">  &lt;%=request.getAttribute(<span class="string">"message"</span>)%&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>home.html<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span></span><br><span class="line">    我是网站的首页，欢迎访问</span><br><span class="line"><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -220,21 +222,32 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">安卓</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">servlet</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">glide</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网页刷新</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">动画</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JSP</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JavaWeb//" class="article-tag-list-link color3">JavaWeb</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -284,7 +297,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://gwrblog.top/2018/07/15/glide/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://gwrblog.top/2018/08/05/javaweb/refreshWeb/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -298,18 +311,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/16/toolbar1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Toolbar上图标与文字呈白色
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/07/14/java1.0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java语言与面向对象的程序设计</div>
+    <a href="/2018/08/05/javaweb/loginErrorDemo/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">案例-登录错误时显示错误界面</div>
       <i class="icon-circle-right"></i>
     </a>
   
