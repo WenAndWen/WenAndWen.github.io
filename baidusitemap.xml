@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>http://gwrblog.top/2018/08/05/javaweb/loginErrorDemo/</loc>
+    <lastmod>2018-08-05T06:25:11.322Z</lastmod>
+    <data>
+        <display>
+        <title>案例-登录错误时显示错误界面</title>
+        <pubTime>2018-08-05T06:16:28.687Z</pubTime>
+        
+        <tag>登录界面</tag>
+         
+        <tag>servlet</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaWeb" url="http://gwrblog.top/categories/JavaWeb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://gwrblog.top/2018/08/05/javaweb/servletSkip/</loc>
+    <lastmod>2018-08-05T06:19:17.967Z</lastmod>
+    <data>
+        <display>
+        <title>请求转发与重定向区别</title>
+        <pubTime>2018-08-05T06:14:48.486Z</pubTime>
+        
+        <tag>请求转发</tag>
+         
+        <tag>重定向</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaWeb" url="http://gwrblog.top/categories/JavaWeb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://gwrblog.top/2018/08/04/javaweb/verifyCode/</loc>
     <lastmod>2018-08-04T08:56:38.826Z</lastmod>
     <data>
