@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://gwrblog.top/2018/08/06/javaweb/downloadDemo/</loc>
+    <lastmod>2018-08-06T01:01:25.354Z</lastmod>
+    <data>
+        <display>
+        <title>案例-文件下载</title>
+        <pubTime>2018-08-06T00:53:09.817Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>servlet</tag>
+         
+        <tag>文件下载</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaWeb" url="http://gwrblog.top/categories/JavaWeb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://gwrblog.top/2018/08/05/javaweb/refreshWeb/</loc>
     <lastmod>2018-08-05T10:29:10.629Z</lastmod>
     <data>
@@ -11,11 +35,11 @@
         <title>案例-网页的自动刷新</title>
         <pubTime>2018-08-05T10:21:58.158Z</pubTime>
         
-        <tag>servlet</tag>
-         
         <tag>网页刷新</tag>
          
         <tag>JSP</tag>
+         
+        <tag>servlet</tag>
          
          
            
@@ -35,9 +59,9 @@
         <title>案例-登录错误时显示错误界面</title>
         <pubTime>2018-08-05T06:16:28.687Z</pubTime>
         
-        <tag>登录界面</tag>
-         
         <tag>servlet</tag>
+         
+        <tag>登录界面</tag>
          
          
            
