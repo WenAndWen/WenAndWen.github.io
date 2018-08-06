@@ -6,24 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://gwrblog.top">
-  <title>微信小程序项目结构 | 郭小睿的博客</title>
+  <title>cookie的常见API | 郭小睿的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="简要概括，微信小程序的项目结构">
+  <meta name="description" content="cookie.setMaxAge(60*10);//这里的参数单位是秒，此时是10分钟注意：如果不设置持久化时间，默认是一个会话流程结束，清楚cookie信息，即浏览器被关闭。">
+<meta name="keywords" content="cookie,API">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信小程序项目结构">
-<meta property="og:url" content="http://gwrblog.top/2018/05/02/wxxcx2/index.html">
+<meta property="og:title" content="cookie的常见API">
+<meta property="og:url" content="http://gwrblog.top/2018/08/06/javaweb/cookieApi/index.html">
 <meta property="og:site_name" content="郭小睿的博客">
-<meta property="og:description" content="简要概括，微信小程序的项目结构">
+<meta property="og:description" content="cookie.setMaxAge(60*10);//这里的参数单位是秒，此时是10分钟注意：如果不设置持久化时间，默认是一个会话流程结束，清楚cookie信息，即浏览器被关闭。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/stxmjg.png">
-<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/wxxcxjiegou.png">
-<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/zhutijg.png">
-<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/yemianjg.png">
-<meta property="og:updated_time" content="2018-06-26T08:39:59.494Z">
+<meta property="og:updated_time" content="2018-08-06T06:39:15.539Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信小程序项目结构">
-<meta name="twitter:description" content="简要概括，微信小程序的项目结构">
-<meta name="twitter:image" content="http://p7lhtaft4.bkt.clouddn.com/stxmjg.png">
+<meta name="twitter:title" content="cookie的常见API">
+<meta name="twitter:description" content="cookie.setMaxAge(60*10);//这里的参数单位是秒，此时是10分钟注意：如果不设置持久化时间，默认是一个会话流程结束，清楚cookie信息，即浏览器被关闭。">
   
     <link rel="alternative" href="/atom.xml" title="郭小睿的博客" type="application/atom+xml">
   
@@ -159,32 +155,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-wxxcx2" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-javaweb/cookieApi" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      微信小程序项目结构
+      cookie的常见API
     </h1>
   
 
         
-        <a href="/2018/05/02/wxxcx2/" class="archive-article-date">
-  	<time datetime="2018-05-02T14:54:35.519Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
+        <a href="/2018/08/06/javaweb/cookieApi/" class="archive-article-date">
+  	<time datetime="2018-08-06T06:27:27.224Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>简要概括，微信小程序的项目结构</p>
-<a id="more"></a>
-<h1 id="微信小程序项目结构"><a href="#微信小程序项目结构" class="headerlink" title="微信小程序项目结构"></a>微信小程序项目结构</h1><h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p><img src="http://p7lhtaft4.bkt.clouddn.com/stxmjg.png" alt="项目结构"><br><img src="http://p7lhtaft4.bkt.clouddn.com/wxxcxjiegou.png" alt="文件后缀与功能"><br><strong>小程序包含一个描述整体程序的 app 和多个描述各自页面的 page。</strong></p>
-<h3 id="主体结构"><a href="#主体结构" class="headerlink" title="主体结构"></a>主体结构</h3><p>一个小程序主体部分由三个文件组成，必须放在项目的根目录。<br><br><br><img src="http://p7lhtaft4.bkt.clouddn.com/zhutijg.png" alt="主体结构"></p>
-<h3 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h3><p>一个小程序页面由四个文件组成。<br><br><br><img src="http://p7lhtaft4.bkt.clouddn.com/yemianjg.png" alt="页面结构"></p>
-<p>作者 [郭小睿]<br>2018 年 05月 02日    </p>
+        <p>cookie.setMaxAge(60*10);//这里的参数单位是秒，此时是10分钟<br>注意：如果不设置持久化时间，默认是一个会话流程结束，清楚cookie信息，即浏览器被关闭。<br><a id="more"></a><br>cookie.setPath();//<br>cookie.setPath(“/hello”)//访问hello应用时，任何资源都携带cookie信息<br>cook.setPath(“/hello/getCookie”)//只有访问hello中的getCookie才会携带cookie信息</p>
+<p>response.addCookie();//向客户端发送cookie信息</p>
+<p>删除客户端的信息，只需要cookie.setMaxAge(0),覆盖同名、同路径的cookie信息就可以了，即设置持久化时间为0.</p>
 
       
 
@@ -224,13 +217,28 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">cookie</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">API</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/wx小程序//" class="article-tag-list-link color1">wx小程序</a>
+        			<a href="/categories/JavaWeb//" class="article-tag-list-link color3">JavaWeb</a>
         		</li>
       		
 		</ul>
@@ -285,7 +293,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://gwrblog.top/2018/05/02/wxxcx2/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://gwrblog.top/2018/08/06/javaweb/cookieApi/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -299,18 +307,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/08/android1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          安卓控件background效果
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/02/wxxcx1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">微信小程序准备与创建</div>
+    <a href="/2018/08/06/javaweb/cookieSessionFlow/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">cookie的会话流程</div>
       <i class="icon-circle-right"></i>
     </a>
   
