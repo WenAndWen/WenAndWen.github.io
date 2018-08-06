@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://gwrblog.top/2018/08/06/javaweb/timeCookieDemo/</loc>
+    <lastmod>2018-08-06T11:39:35.543Z</lastmod>
+    <data>
+        <display>
+        <title>案例-记录网站上一次访问时间</title>
+        <pubTime>2018-08-06T11:35:22.676Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>servlet</tag>
+         
+        <tag>cookie</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaWeb" url="http://gwrblog.top/categories/JavaWeb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://gwrblog.top/2018/08/06/javaweb/cookieApi/</loc>
     <lastmod>2018-08-06T06:39:15.539Z</lastmod>
     <data>
@@ -55,9 +79,9 @@
         
         <tag>java</tag>
          
-        <tag>servlet</tag>
-         
         <tag>文件下载</tag>
+         
+        <tag>servlet</tag>
          
          
            
@@ -77,11 +101,11 @@
         <title>案例-网页的自动刷新</title>
         <pubTime>2018-08-05T10:21:58.158Z</pubTime>
         
+        <tag>servlet</tag>
+         
         <tag>网页刷新</tag>
          
         <tag>JSP</tag>
-         
-        <tag>servlet</tag>
          
          
            
