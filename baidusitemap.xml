@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://gwrblog.top/2018/08/06/javaweb/timeCookieDemo/</loc>
-    <lastmod>2018-08-06T11:39:35.543Z</lastmod>
+    <lastmod>2018-08-06T11:52:41.691Z</lastmod>
     <data>
         <display>
         <title>案例-记录网站上一次访问时间</title>
@@ -79,9 +79,9 @@
         
         <tag>java</tag>
          
-        <tag>文件下载</tag>
-         
         <tag>servlet</tag>
+         
+        <tag>文件下载</tag>
          
          
            
@@ -101,11 +101,11 @@
         <title>案例-网页的自动刷新</title>
         <pubTime>2018-08-05T10:21:58.158Z</pubTime>
         
-        <tag>servlet</tag>
-         
         <tag>网页刷新</tag>
          
         <tag>JSP</tag>
+         
+        <tag>servlet</tag>
          
          
            
