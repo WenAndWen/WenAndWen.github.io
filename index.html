@@ -167,6 +167,61 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-MathModeling/MatlabNote" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这次建模可谓是“一波三折”，原本我们是7月25号开始培训，可是因为某些原因推迟到8月7号，早已计划好暑假打工的事也耽搁了。<br>回头想想，也是值得的，走进数学的世界，走进模型的世界。<br>西安的天，格外的热。今天还下暴雨了，心情刚开始是愉悦的，让这雨水湿润下这干燥而闷热的空气。好景不长~停水，停电，没网，恐怕这暴雨为我们带来的不仅仅是福，还献上了一段小插曲~<br>手机也没电了，待在教室也非常的无聊，时间也不早了，也没有了出去玩耍的念头<br>于是，将这几天建模学到的东西总结一下，以便于后面的查阅，也是可以从总结中查漏补缺，提高自己~嘴上很正派，心里MMP。好几天没写东西了，是时候充实一下自己了</p>
+<p>因为我是第二天才开始参加培训的，可能有记录不周的地方，望多多指教！</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x=[<span class="number">0</span>,<span class="number">2</span>*pi]</span><br><span class="line">y=<span class="built_in">sin</span>(x)</span><br><span class="line">plot(x,y,<span class="string">'b'</span>)</span><br><span class="line">xlabel(<span class="string">'x/a'</span>)</span><br><span class="line">ylabel(<span class="string">'y/(sina)'</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/pic1.png" alt="图像1"><br>前两句表达式，跟我们数学很像，因为毕竟是数学建模嘛~<br>plot()对于我们来说比较陌生，它是在matlab中绘制图形时候用的函数。<br>说到函数，学过c、java语言的同学应该很熟悉，<strong>函数</strong>它分为无参和有参的，然而有参的函数，你在使用时，肯定要知道他的参数值表达的什么意思，反之，在程序中调用函数的时候，你会很鸡肋~<br>这里我告诉大家一个小tip，在<strong>命令窗口(commend windows)</strong>中，输入”help 函数名”,你就可以看到关于此函数的使用方法，可以大大的提高你写程序的效率~<br>xlabel(),ylabel()，这两个函数,我们可以这样理解，label是标签的意思，那么xlabel就是为x轴设置标签为某，ylabel想必不言而喻~<br>一波操作，一个优美的函数图像就”跃然纸上”~</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">0</span>:<span class="number">1</span>/<span class="number">3000</span>:<span class="number">1</span>;y=<span class="built_in">cos</span>(<span class="built_in">tan</span>(<span class="built_in">pi</span>*x));</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>),plot(x,y)</span><br><span class="line">title(<span class="string">'复杂函数'</span>)</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>),plot(x,y)</span><br><span class="line">axis([<span class="number">0.4</span> <span class="number">0.6</span> <span class="number">-1</span> <span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<p><img src="http://p7lhtaft4.bkt.clouddn.com/pic2.png" alt="图像2"><br>相对于上个程序，<strong>x=</strong>后，用三个:(英文状态下)依次隔开，表达的是，0是x的最小值(起点)，1是最大值(终点),1/3000可以说是0-1之间的分段点，以单位为1/3000将0-1设置多个分段点<br>subplot()，就是将一张图纸分割成若干个区域，第一个参数值是行，第二个是列，第三个是绘制的图形即将显示在哪个区域。<br>title就是图纸的标题,略略略~<br>axis()函数是设置当前图形的坐标范围，分别为x轴的最小、最大值，y轴的最小，最大值。</p>
+<p>对于你在学习中遇到的陌生的函数，虽说我没有接触过matlab，我接触过AndroidStdio、IntelliJ IDEA 这些程序开发软件。<br>所以在学习和开发程序的道路上，我用我的经历和经验，我建议你多去使用指令<strong>help</strong>查看它的用法，多看代码，你肯定会有提高的。<br>对于英文不好的朋友，你也可以去百度，csdn或者matlab中文开发文档中查阅资料。<br>此外，在学习中遇到问题的朋友，也可以联系我QQ<strong>87920151</strong>，我们一起交流，解决问题，共同提高~我一定</p>
+<p>文末彩蛋^_^<br>最后附上，matlab应用安装的方法~</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/09/MathModeling/MatlabNote/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-javaweb/timeCookieDemo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -207,11 +262,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">servlet</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">cookie</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">cookie</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">servlet</a>
         		</li>
       		
 		</ul>
@@ -484,11 +539,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">servlet</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">文件下载</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">文件下载</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">servlet</a>
         		</li>
       		
 		</ul>
@@ -575,15 +630,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">servlet</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网页刷新</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JSP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">servlet</a>
         		</li>
       		
 		</ul>
@@ -976,86 +1031,6 @@
 
 
   
-    <article id="post-java2.0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/16/java2.0/">简单的JAVA程序</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/16/java2.0/" class="archive-article-date">
-  	<time datetime="2018-07-16T13:27:57.414Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>开发一个简单的Java程序<br>
-        
-          <a class="article-more-a" href="/2018/07/16/java2.0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">程序</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/16/java2.0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1259,23 +1234,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网页刷新</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">servlet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">cookie</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">API</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1283,7 +1242,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">登录界面</a>
+                <a href="javascript:void(0)" class="js-tag color3">servlet</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1295,7 +1254,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">登录界面</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网页刷新</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">API</a>
               </li>
             
             <div class="clearfix"></div>
