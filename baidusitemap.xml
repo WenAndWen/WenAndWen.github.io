@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://gwrblog.top/2018/08/11/javaweb/ShoppingCartDemo/</loc>
+    <lastmod>2018-08-11T11:44:06.223Z</lastmod>
+    <data>
+        <display>
+        <title>案例——购物车</title>
+        <pubTime>2018-08-11T11:39:16.622Z</pubTime>
+        
+        <tag>Session</tag>
+         
+        <tag>Cookie</tag>
+         
+        <tag>html</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaWeb" url="http://gwrblog.top/categories/JavaWeb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://gwrblog.top/2018/08/11/javaweb/sessionPersistence/</loc>
     <lastmod>2018-08-11T09:30:02.797Z</lastmod>
     <data>
@@ -252,11 +276,11 @@
         <title>案例-网页的自动刷新</title>
         <pubTime>2018-08-05T10:21:58.158Z</pubTime>
         
-        <tag>servlet</tag>
-         
         <tag>网页刷新</tag>
          
         <tag>JSP</tag>
+         
+        <tag>servlet</tag>
          
          
            
@@ -276,9 +300,9 @@
         <title>案例-登录错误时显示错误界面</title>
         <pubTime>2018-08-05T06:16:28.687Z</pubTime>
         
-        <tag>登录界面</tag>
-         
         <tag>servlet</tag>
+         
+        <tag>登录界面</tag>
          
          
            
