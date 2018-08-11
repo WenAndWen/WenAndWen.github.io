@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="http://gwrblog.top">
   <title>Session的会话流程和创建与获取 | 郭小睿的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="会话流程示意图Session技术简介：12345678910111213141516171819202122package net.wen.session;import javax.servlet.ServletException;import javax.servlet.annotation.WebServlet;import javax.servlet.http.HttpServlet;imp">
+  <meta name="description" content="会话流程示意图">
 <meta name="keywords" content="Session,Servlet">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Session的会话流程和创建与获取">
 <meta property="og:url" content="http://gwrblog.top/2018/08/11/javaweb/session_build&get/index.html">
 <meta property="og:site_name" content="郭小睿的博客">
-<meta property="og:description" content="会话流程示意图Session技术简介：12345678910111213141516171819202122package net.wen.session;import javax.servlet.ServletException;import javax.servlet.annotation.WebServlet;import javax.servlet.http.HttpServlet;imp">
+<meta property="og:description" content="会话流程示意图">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/20180811_160254_SessionSessionFlow.png">
 <meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/20180811_160254_SessionMessage.png">
-<meta property="og:updated_time" content="2018-08-11T08:04:38.645Z">
+<meta property="og:updated_time" content="2018-08-11T08:07:43.138Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Session的会话流程和创建与获取">
-<meta name="twitter:description" content="会话流程示意图Session技术简介：12345678910111213141516171819202122package net.wen.session;import javax.servlet.ServletException;import javax.servlet.annotation.WebServlet;import javax.servlet.http.HttpServlet;imp">
+<meta name="twitter:description" content="会话流程示意图">
 <meta name="twitter:image" content="http://p7lhtaft4.bkt.clouddn.com/20180811_160254_SessionSessionFlow.png">
   
     <link rel="alternative" href="/atom.xml" title="郭小睿的博客" type="application/atom+xml">
@@ -190,7 +190,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>会话流程示意图<br><img src="http://p7lhtaft4.bkt.clouddn.com/20180811_160254_SessionSessionFlow.png" alt="会话流程示意图"><br>Session技术简介：<br><img src="http://p7lhtaft4.bkt.clouddn.com/20180811_160254_SessionMessage.png" alt="Session技术简介"><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> net.wen.session;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpSession;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet</span>(name = <span class="string">"SessionServlet"</span>,urlPatterns = <span class="string">"/session"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SessionServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        HttpSession session = request.getSession();</span><br><span class="line">        String id = session.getId();</span><br><span class="line">        response.getWriter().write(id);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>会话流程示意图<br><img src="http://p7lhtaft4.bkt.clouddn.com/20180811_160254_SessionSessionFlow.png" alt="会话流程示意图"><br><a id="more"></a><br>Session技术简介：<br><img src="http://p7lhtaft4.bkt.clouddn.com/20180811_160254_SessionMessage.png" alt="Session技术简介"><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> net.wen.session;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpSession;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet</span>(name = <span class="string">"SessionServlet"</span>,urlPatterns = <span class="string">"/session"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SessionServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        HttpSession session = request.getSession();</span><br><span class="line">        String id = session.getId();</span><br><span class="line">        response.getWriter().write(id);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -585,6 +585,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件下载</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">servlet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Matlab</a>
               </li>
              
@@ -597,31 +605,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">文件下载</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">servlet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">cookie</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">登录界面</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">请求转发</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">重定向</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">API</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">登录界面</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -630,6 +622,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JSP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">请求转发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">重定向</a>
               </li>
              
               <li class="article-tag-list-item">
