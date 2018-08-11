@@ -6,19 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://gwrblog.top">
-  <title>HTML基础 | 郭小睿的博客</title>
+  <title>Session对象的生命周期 | 郭小睿的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近接触了Html和css，刚入门，就记录了一些笔记。">
+  <meta name="description" content="简述session的生命周期">
+<meta name="keywords" content="Session,生命周期">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML基础">
-<meta property="og:url" content="http://gwrblog.top/2018/04/30/html1/index.html">
+<meta property="og:title" content="Session对象的生命周期">
+<meta property="og:url" content="http://gwrblog.top/2018/08/11/javaweb/sessionLifeCycle/index.html">
 <meta property="og:site_name" content="郭小睿的博客">
-<meta property="og:description" content="最近接触了Html和css，刚入门，就记录了一些笔记。">
+<meta property="og:description" content="简述session的生命周期">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-26T08:38:44.224Z">
+<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/20180811_163631_pg_Tomcat_web.png">
+<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/20180811_162925_sessionTimeOut.png">
+<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/20180811_164215_projext_web.png">
+<meta property="og:updated_time" content="2018-08-11T08:44:58.806Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML基础">
-<meta name="twitter:description" content="最近接触了Html和css，刚入门，就记录了一些笔记。">
+<meta name="twitter:title" content="Session对象的生命周期">
+<meta name="twitter:description" content="简述session的生命周期">
+<meta name="twitter:image" content="http://p7lhtaft4.bkt.clouddn.com/20180811_163631_pg_Tomcat_web.png">
   
     <link rel="alternative" href="/atom.xml" title="郭小睿的博客" type="application/atom+xml">
   
@@ -166,51 +171,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-html1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-javaweb/sessionLifeCycle" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      HTML基础
+      Session对象的生命周期
     </h1>
   
 
         
-        <a href="/2018/04/30/html1/" class="archive-article-date">
-  	<time datetime="2018-04-30T08:12:23.262Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-30</time>
+        <a href="/2018/08/11/javaweb/sessionLifeCycle/" class="archive-article-date">
+  	<time datetime="2018-08-11T08:18:38.097Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近接触了Html和css，刚入门，就记录了一些笔记。<br><a id="more"></a></p>
-<h1 id="HTML页面结构"><a href="#HTML页面结构" class="headerlink" title="HTML页面结构"></a>HTML页面结构</h1><p>一个完整的网页包括4个部分：《html》元素、《head》头部元素、《body》元素、《title》标题元素。</p>
-<p><br><br><strong>在阅读中把”《》”当做”&lt;&gt;”看。</strong></p>
-<h2 id="《html》元素"><a href="#《html》元素" class="headerlink" title="《html》元素"></a>《html》元素</h2><p>每个网页中的所有内容都写在这个标签中，这个标签又分为起始标签和结束标签。</p>
-<blockquote>
-<p>《html》文档内容《/html》</p>
-</blockquote>
-<h2 id="《head》头部元素"><a href="#《head》头部元素" class="headerlink" title="《head》头部元素"></a>《head》头部元素</h2><p>这个元素中的内容不会显示在网页中，但是有很多重要的标记。浏览器在读取网页中，都会从这个头部元素中读取信息。</p>
-<blockquote>
-<p>《head》头部内容《/head》</p>
-</blockquote>
-<h2 id="《body》主体元素"><a href="#《body》主体元素" class="headerlink" title="《body》主体元素"></a>《body》主体元素</h2><p>这个元素中所有的内容都会出现在网页中。</p>
-<blockquote>
-<p>《body》页面主体《/body》</p>
-</blockquote>
-<h2 id="《title》标题元素"><a href="#《title》标题元素" class="headerlink" title="《title》标题元素"></a>《title》标题元素</h2><p>这个元素会写在《head》标签中，用来定义页面的标题，因为它在head标签中，所以它不会出现在网页中，只是会被浏览器读取，显示在标签栏。</p>
-<blockquote>
-<p>《title》页面标题《/title》</p>
-</blockquote>
-<h1 id="元信息标签《meta》"><a href="#元信息标签《meta》" class="headerlink" title="元信息标签《meta》"></a>元信息标签《meta》</h1><p>位于头部标签《head》和标题标签《title》之间，它通常用来为搜索引擎定义页面的主题，也可以用来设置页面。meta的两种属性————name 、http-equiv</p>
-<blockquote>
-<p>《meta name=”Generator” contect=”网页生成工具”》 《!–说明网页生成工具–》<br>《meta name=”Keywords” contect=”网页关键字”》  《!–向搜索引擎说明网页的关键字–》<br>《meta name=”Description” contect=”网站的主要内容”》 《!–告诉搜索引擎网页的主要内容》<br>《meta name=”Author” contect=”作者姓名”》 《!–告诉搜索引擎网页制作的作者》<br>《mate name=”Robots” contect=”#”》 《!–定义网页的检索情况和网页上的连接查询情况–》<br><br><br> Robots这里的contect的值共有6种，all、none、index、follow、noindex、nofollow</p>
-</blockquote>
-<hr>
-<p>作者 [郭小睿]<br>2018 年 04月 30日    </p>
+        <p>简述session的生命周期<br><a id="more"></a><br>创建：第一次执行request.getSession()时创建<br>销毁：<br>服务器(非正常)关闭时<br>session过期(默认30分钟)</p>
+<p>Q：时间的起点，从何时开始计算30分钟<br>A：从不再开始操作session开始</p>
+<p>设置session的过期时间，可以在Tomcat安装路径下的web.xml中设置<br><img src="http://p7lhtaft4.bkt.clouddn.com/20180811_163631_pg_Tomcat_web.png" alt="web.xml"><br><img src="http://p7lhtaft4.bkt.clouddn.com/20180811_162925_sessionTimeOut.png" alt="设置session的过期时间"><br>如果在这里修改了时间，那么我们Tomcat下所有web项目的有效时间都是30分钟了，所以不建议这么修改。</p>
+<p>因此我们可以在自己的项目下的web.xml中进行修改。<br>我们只需要把这行配置加进去就可以了<br> <session-config><br>        <session-timeout>30</session-timeout><br> </session-config><br><img src="http://p7lhtaft4.bkt.clouddn.com/20180811_164215_projext_web.png" alt="project_web"></p>
 
       
 
@@ -250,13 +234,28 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Session</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生命周期</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/网站设计//" class="article-tag-list-link color5">网站设计</a>
+        			<a href="/categories/JavaWeb//" class="article-tag-list-link color3">JavaWeb</a>
         		</li>
       		
 		</ul>
@@ -311,7 +310,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://gwrblog.top/2018/04/30/html1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://gwrblog.top/2018/08/11/javaweb/sessionLifeCycle/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -325,18 +324,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/02/wxxcx1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          微信小程序准备与创建
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/04/29/devc++/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Dev c++破改版</div>
+    <a href="/2018/08/11/javaweb/session_build&get2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用Session域对象存取数据</div>
       <i class="icon-circle-right"></i>
     </a>
   

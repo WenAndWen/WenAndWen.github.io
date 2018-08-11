@@ -4,11 +4,55 @@
 
     
   <url>
-    <loc>http://gwrblog.top/2018/08/11/javaweb/session_build&get/</loc>
-    <lastmod>2018-08-11T08:07:43.138Z</lastmod>
+    <loc>http://gwrblog.top/2018/08/11/javaweb/sessionLifeCycle/</loc>
+    <lastmod>2018-08-11T08:44:58.806Z</lastmod>
     <data>
         <display>
-        <title>Session的会话流程和创建与获取</title>
+        <title>Session对象的生命周期</title>
+        <pubTime>2018-08-11T08:18:38.097Z</pubTime>
+        
+        <tag>Session</tag>
+         
+        <tag>生命周期</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaWeb" url="http://gwrblog.top/categories/JavaWeb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://gwrblog.top/2018/08/11/javaweb/session_build&get2/</loc>
+    <lastmod>2018-08-11T08:16:43.188Z</lastmod>
+    <data>
+        <display>
+        <title>使用Session域对象存取数据</title>
+        <pubTime>2018-08-11T08:13:13.790Z</pubTime>
+        
+        <tag>Session</tag>
+         
+        <tag>Servlet</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaWeb" url="http://gwrblog.top/categories/JavaWeb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://gwrblog.top/2018/08/11/javaweb/session_build&get/</loc>
+    <lastmod>2018-08-11T08:11:49.534Z</lastmod>
+    <data>
+        <display>
+        <title>Session的会话流程和对象的创建与获取</title>
         <pubTime>2018-08-11T07:25:41.357Z</pubTime>
         
         <tag>Session</tag>
@@ -100,9 +144,9 @@
         
         <tag>java</tag>
          
-        <tag>servlet</tag>
-         
         <tag>cookie</tag>
+         
+        <tag>servlet</tag>
          
          
            
@@ -166,9 +210,9 @@
         
         <tag>java</tag>
          
-        <tag>文件下载</tag>
-         
         <tag>servlet</tag>
+         
+        <tag>文件下载</tag>
          
          
            
@@ -212,9 +256,9 @@
         <title>案例-登录错误时显示错误界面</title>
         <pubTime>2018-08-05T06:16:28.687Z</pubTime>
         
-        <tag>servlet</tag>
-         
         <tag>登录界面</tag>
+         
+        <tag>servlet</tag>
          
          
            
