@@ -5,14 +5,19 @@
     
   <url>
     <loc>http://gwrblog.top/2018/08/11/javaweb/sessionPersistence/</loc>
-    <lastmod>2018-08-11T08:53:31.072Z</lastmod>
+    <lastmod>2018-08-11T09:30:02.797Z</lastmod>
     <data>
         <display>
-        <title></title>
+        <title>Session的持久化</title>
         <pubTime>2018-08-11T08:53:31.072Z</pubTime>
         
+        <tag>Session</tag>
+         
          
            
+             
+              <breadCrumb title="JavaWeb" url="http://gwrblog.top/categories/JavaWeb/"/>
+          
         </display>
     </data>
     </url>
@@ -225,9 +230,9 @@
         
         <tag>java</tag>
          
-        <tag>文件下载</tag>
-         
         <tag>servlet</tag>
+         
+        <tag>文件下载</tag>
          
          
            
@@ -271,9 +276,9 @@
         <title>案例-登录错误时显示错误界面</title>
         <pubTime>2018-08-05T06:16:28.687Z</pubTime>
         
-        <tag>servlet</tag>
-         
         <tag>登录界面</tag>
+         
+        <tag>servlet</tag>
          
          
            
