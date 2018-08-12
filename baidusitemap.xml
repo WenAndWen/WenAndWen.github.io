@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>http://gwrblog.top/2018/08/12/Essay/diary2018.8.12/</loc>
+    <lastmod>2018-08-12T14:11:27.618Z</lastmod>
+    <data>
+        <display>
+        <title>8月12日我的生日</title>
+        <pubTime>2018-08-12T13:41:00.142Z</pubTime>
+        
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://gwrblog.top/2018/08/11/javaweb/ShoppingCartDemo/</loc>
     <lastmod>2018-08-11T11:44:06.223Z</lastmod>
     <data>
@@ -254,9 +271,9 @@
         
         <tag>java</tag>
          
-        <tag>servlet</tag>
-         
         <tag>文件下载</tag>
+         
+        <tag>servlet</tag>
          
          
            
@@ -276,11 +293,11 @@
         <title>案例-网页的自动刷新</title>
         <pubTime>2018-08-05T10:21:58.158Z</pubTime>
         
+        <tag>servlet</tag>
+         
         <tag>网页刷新</tag>
          
         <tag>JSP</tag>
-         
-        <tag>servlet</tag>
          
          
            
