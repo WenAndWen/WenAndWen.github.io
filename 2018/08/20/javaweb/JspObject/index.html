@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://gwrblog.top">
-  <title>Category: Matlab | 郭小睿的博客</title>
+  <title>Jsp的九大隐式对象 | 郭小睿的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="爱好折腾的码农">
-<meta property="og:type" content="website">
-<meta property="og:title" content="郭小睿的博客">
-<meta property="og:url" content="http://gwrblog.top/categories/Matlab/index.html">
+  <meta name="description" content="jsp九大隐式对象分别是(带星号的为最重要的3个对象): 1.*request,请求对象 2.response,响应对象 3.pageContext,页面上下文对象(数据可用范围只在本页) 4.*session，会话对象 5.*application,应用程序对象 6.out,输出对象 7.config,配置对象 8.page,页面对象(相当于java中的this) 9.exception,异常对">
+<meta name="keywords" content="jsp,object">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jsp的九大隐式对象">
+<meta property="og:url" content="http://gwrblog.top/2018/08/20/javaweb/JspObject/index.html">
 <meta property="og:site_name" content="郭小睿的博客">
-<meta property="og:description" content="爱好折腾的码农">
+<meta property="og:description" content="jsp九大隐式对象分别是(带星号的为最重要的3个对象): 1.*request,请求对象 2.response,响应对象 3.pageContext,页面上下文对象(数据可用范围只在本页) 4.*session，会话对象 5.*application,应用程序对象 6.out,输出对象 7.config,配置对象 8.page,页面对象(相当于java中的this) 9.exception,异常对">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-08-19T16:19:17.464Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="郭小睿的博客">
-<meta name="twitter:description" content="爱好折腾的码农">
+<meta name="twitter:title" content="Jsp的九大隐式对象">
+<meta name="twitter:description" content="jsp九大隐式对象分别是(带星号的为最重要的3个对象): 1.*request,请求对象 2.response,响应对象 3.pageContext,页面上下文对象(数据可用范围只在本页) 4.*session，会话对象 5.*application,应用程序对象 6.out,输出对象 7.config,配置对象 8.page,页面对象(相当于java中的this) 9.exception,异常对">
   
     <link rel="alternative" href="/atom.xml" title="郭小睿的博客" type="application/atom+xml">
   
@@ -165,177 +167,241 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-javaweb/JspObject" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/11/MathModeling/InstallationQuestion/" class="archive-article-date">
-  	<time datetime="2018-08-11T07:10:17.468Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-11</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/11/MathModeling/InstallationQuestion/">Matlab安装遇到的坑</a>
+    <h1 class="article-title" itemprop="name">
+      Jsp的九大隐式对象
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/08/20/javaweb/JspObject/" class="archive-article-date">
+  	<time datetime="2018-08-19T16:15:52.647Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>jsp九大隐式对象分别是(带星号的为最重要的3个对象):</p>
+<pre><code>1.*request,请求对象
+2.response,响应对象
+3.pageContext,页面上下文对象(数据可用范围只在本页)
+4.*session，会话对象
+5.*application,应用程序对象
+6.out,输出对象
+7.config,配置对象
+8.page,页面对象(相当于java中的this)
+9.exception,异常对象在errpage内才能用
+</code></pre><p>1.*request,请求对象（对象代表的是来自客户端的请求，例如我们在form表单中填写的信息等，是最常用的对象。关于它的方法使用较多的是getParameter（getParameterValues的特殊情况,没有出现重复name，表示请求参数值只有一个，如果请求参数值有多个，请使用getParameterValues。在多选框的情况下，需要使用getParameterValues方法来获取用户所选择的多个复选框的值）、getParameternames和getParameterValues，通过调用这几个方法来获取请求对象所包含的参数的值）<br>request:(在同一次请求响应过程中响应数据)<br>1.1:request的setAttribute与getAttribute方法一般都是 成对出现的，首先通过setAttribute方法设置属性与属性值，然后通过getAttribute方法根据属性获取到与该属性对应的对象值。 setAttribute与getAttribute方法都是在服务器端内部执行的，客户端不知道服务器端是否执过这两个方法。<br>1.2:request 的getParameter方法的作用是获取到客户端，通过表单或url请求参数所发送过来的参数值，是客户端与服务器之间的交互，服务器端要想获取到客 户端发送过来的数据，就需要使用getParameter方法来获取。没有与getParameter方法对应的setParameter方法<br>1.3:request 对象内数据的存活范围就是在request对象的存活范围内，当客户端向服务器发送一个请求，服务器向客户端返回一个响应后，该请求对象就被销毁了;之后 再向服务器端发送新的请求时，服务器会创建新的request对象，该request对象与之前的request对象没有任何关系，因此也无法获得在之前 的request对象中所存放的任何数据;</p>
+<p>2.response,响应对象（对象代表的是对客户端的响应，也就是说可以通过”response”对象来组织发送到客户端的数据，用于文件下载。但是由于组织方式比较底层，所以不建议普通读者使用，需要向客户端发送文字直接使用”out”对象即可,）</p>
+<p>3.pageContext,页面上下文对象(数据可用范围只在本页)</p>
+<p>4.*session，会话对象<br>4.1:session对象内数据的存活范围也就是session对象的存活范围(?只要浏览器不关闭，session对象会一直存在?);</p>
+<p>5.*application,应用程序对象<br>5.1:application(应用对象):存活范围最大的对象，只要服务器没有关闭，application对象中的数据就会一直存在，在整个服务器运行过程中，applicaion对象只有一个</p>
+<p>6.out,输出对象</p>
+<p>7.config,配置对象</p>
+<p>8.page,页面对象(相当于java中的this)</p>
+<p>9.exception,异常对象在errpage内才能用</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃辣条<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Matlab</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Matlab//" class="article-tag-list-link color2">Matlab</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/10/MathModeling/MatlabInstallation/" class="archive-article-date">
-  	<time datetime="2018-08-10T05:51:50.951Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/10/MathModeling/MatlabInstallation/">Matlab安装与破解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Matlab</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">jsp</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">object</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Matlab//" class="article-tag-list-link color2">Matlab</a>
+        			<a href="/categories/JavaWeb//" class="article-tag-list-link color3">JavaWeb</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://gwrblog.top/2018/08/20/javaweb/JspObject/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/09/MathModeling/MatlabNote/" class="archive-article-date">
-  	<time datetime="2018-08-09T11:58:53.745Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/19/javaweb/JspScriptsAndComments/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Jsp的脚本和注释</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/09/MathModeling/MatlabNote/">记数学建模与matlab使用技巧</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Matlab</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数学建模</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Matlab//" class="article-tag-list-link color2">Matlab</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+  
+  
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div>
+<script src="//cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script>
+<script src='//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js'></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+   new Valine({
+            av: AV,
+            el: '#vcomment',
+            notify: notify,
+            verify: verify,
+            app_id: "zrVcambRa5AORD7sOH8PSsDQ-gzGzoHsz",
+            app_key: "PGif4VCAbhNNmcepNBFi0jLi",
+            placeholder: "元芳，你怎么看~",
+            avatar: "monsterid",
+            avatar_cdn: "https://sdn.geekzu.org/avatar/",
+            pageSize: 15
+    });
+</script>
+  </section>
+
+
+  
+
+  
 
 
           </div>
@@ -396,10 +462,10 @@ setInterval("createtime()",250);
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
