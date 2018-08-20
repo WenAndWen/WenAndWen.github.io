@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="http://gwrblog.top">
   <title>使用Palette抽取图片颜色 | 郭小睿的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近想实现从一张图片中，获取它的颜色，设置给其余控件，以使得 UI 页面的整体风格更加的美观和融洽。网上查询了一些资料，发现了一个Android 下比较有意思的 Support v7 库~~~ Palette库可以从一张图片(Bitmap)中提取出它突出的颜色，恰巧可以达到我的需求。 步骤1、传递一个 Bitmap，得到一个 Palette。2、获取Palette中指定的色样3、从色样中提取相应的">
+  <meta name="description" content="最近想实现从一张图片中，获取它的颜色，设置给其余控件，以使得 UI 页面的整体风格更加的美观和融洽。网上查询了一些资料，发现了一个Android 下比较有意思的 Support v7 库~~~ Palette库可以从一张图片(Bitmap)中提取出它突出的颜色，恰巧可以达到我的需求。">
 <meta name="keywords" content="palette,UI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Palette抽取图片颜色">
 <meta property="og:url" content="http://gwrblog.top/2018/08/20/Android/PaletteHelp/index.html">
 <meta property="og:site_name" content="郭小睿的博客">
-<meta property="og:description" content="最近想实现从一张图片中，获取它的颜色，设置给其余控件，以使得 UI 页面的整体风格更加的美观和融洽。网上查询了一些资料，发现了一个Android 下比较有意思的 Support v7 库~~~ Palette库可以从一张图片(Bitmap)中提取出它突出的颜色，恰巧可以达到我的需求。 步骤1、传递一个 Bitmap，得到一个 Palette。2、获取Palette中指定的色样3、从色样中提取相应的">
+<meta property="og:description" content="最近想实现从一张图片中，获取它的颜色，设置给其余控件，以使得 UI 页面的整体风格更加的美观和融洽。网上查询了一些资料，发现了一个Android 下比较有意思的 Support v7 库~~~ Palette库可以从一张图片(Bitmap)中提取出它突出的颜色，恰巧可以达到我的需求。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/20180820_232128_songs1.jpg">
 <meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/20180820_232129_songs2.jpg">
-<meta property="og:updated_time" content="2018-08-20T15:26:54.365Z">
+<meta property="og:updated_time" content="2018-08-20T15:28:46.908Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Palette抽取图片颜色">
-<meta name="twitter:description" content="最近想实现从一张图片中，获取它的颜色，设置给其余控件，以使得 UI 页面的整体风格更加的美观和融洽。网上查询了一些资料，发现了一个Android 下比较有意思的 Support v7 库~~~ Palette库可以从一张图片(Bitmap)中提取出它突出的颜色，恰巧可以达到我的需求。 步骤1、传递一个 Bitmap，得到一个 Palette。2、获取Palette中指定的色样3、从色样中提取相应的">
+<meta name="twitter:description" content="最近想实现从一张图片中，获取它的颜色，设置给其余控件，以使得 UI 页面的整体风格更加的美观和融洽。网上查询了一些资料，发现了一个Android 下比较有意思的 Support v7 库~~~ Palette库可以从一张图片(Bitmap)中提取出它突出的颜色，恰巧可以达到我的需求。">
 <meta name="twitter:image" content="http://p7lhtaft4.bkt.clouddn.com/20180820_232128_songs1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="郭小睿的博客" type="application/atom+xml">
@@ -191,7 +191,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>最近想实现从一张图片中，获取它的颜色，设置给其余控件，以使得 UI 页面的整体风格更加的美观和融洽。网上查询了一些资料，发现了一个Android 下比较有意思的 Support v7 库~~~</p>
-<p><code>Palette</code>库可以从一张图片(<code>Bitmap</code>)中提取出它突出的颜色，恰巧可以达到我的需求。</p>
+<p><code>Palette</code>库可以从一张图片(<code>Bitmap</code>)中提取出它突出的颜色，恰巧可以达到我的需求。<br><a id="more"></a></p>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>1、传递一个 Bitmap，得到一个 Palette。<br>2、获取Palette中指定的色样<br>3、从色样中提取相应的颜色。</p>
 <h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><h3 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h3><p>在工程下的 build.gradle 里添加依赖才可以使用Palette,因为传递一个 Bitmap，得到一个Palette，我平常用的<code>glide</code>库加载图片，所以后面我就用glide来获取Bitmap。</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">'com.android.support:palette-v7:27.1.1'</span></span><br><span class="line">implementation <span class="string">'com.github.bumptech.glide:glide:3.6.1'</span></span><br></pre></td></tr></table></figure>
@@ -610,15 +610,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">json</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -634,11 +630,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Matlab</a>
+                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -647,6 +643,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">UI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Matlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -662,11 +666,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -674,15 +674,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">文件下载</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">servlet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">cookie</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">API</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -690,7 +686,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">API</a>
+                <a href="javascript:void(0)" class="js-tag color3">servlet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件下载</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -710,11 +710,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">生命周期</a>
+                <a href="javascript:void(0)" class="js-tag color3">Servlet</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Servlet</a>
+                <a href="javascript:void(0)" class="js-tag color5">生命周期</a>
               </li>
              
               <li class="article-tag-list-item">

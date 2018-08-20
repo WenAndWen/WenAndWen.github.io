@@ -188,56 +188,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>最近想实现从一张图片中，获取它的颜色，设置给其余控件，以使得 UI 页面的整体风格更加的美观和融洽。网上查询了一些资料，发现了一个Android 下比较有意思的 Support v7 库~~~</p>
-<p><code>Palette</code>库可以从一张图片(<code>Bitmap</code>)中提取出它突出的颜色，恰巧可以达到我的需求。</p>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>1、传递一个 Bitmap，得到一个 Palette。<br>2、获取Palette中指定的色样<br>3、从色样中提取相应的颜色。</p>
-<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><h3 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h3><p>在工程下的 build.gradle 里添加依赖才可以使用Palette,因为传递一个 Bitmap，得到一个Palette，我平常用的<code>glide</code>库加载图片，所以后面我就用glide来获取Bitmap。</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">'com.android.support:palette-v7:27.1.1'</span></span><br><span class="line">implementation <span class="string">'com.github.bumptech.glide:glide:3.6.1'</span></span><br></pre></td></tr></table></figure>
-<h3 id="1、获取Palette对象"><a href="#1、获取Palette对象" class="headerlink" title="1、获取Palette对象"></a>1、获取Palette对象</h3><p>获取Palette对象有<code>同步</code>和<code>异步</code>两种方式，建议使用异步获取Palette对象。</p>
-<h4 id="同步获取"><a href="#同步获取" class="headerlink" title="同步获取"></a>同步获取</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Palette palette = Palette.from(bitmap).generate();</span><br></pre></td></tr></table></figure>
-<h4 id="异步获取"><a href="#异步获取" class="headerlink" title="异步获取"></a>异步获取</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Palette.from(bitmap).generate(<span class="keyword">new</span> Palette.PaletteAsyncListener() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onGenerated</span><span class="params">(Palette palette)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;   </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="2、获取Palette生成的色样"><a href="#2、获取Palette生成的色样" class="headerlink" title="2、获取Palette生成的色样"></a>2、获取Palette生成的色样</h3><p>可以获取到以下几种色样，但是有的时候获取不到对应的色样对象，<strong>必须注意非空判断。</strong></p>
-<table>
-<thead>
-<tr>
-<th>色样</th>
-<th style="text-align:center">颜色</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>DominantSwatch</td>
-<td style="text-align:center">最突出的颜色</td>
-</tr>
-<tr>
-<td>VibrantSwatch</td>
-<td style="text-align:center">有活力的颜色</td>
-</tr>
-<tr>
-<td>DarkVibrantSwatch</td>
-<td style="text-align:center">有活力的暗色</td>
-</tr>
-<tr>
-<td>LightVibrantSwatch</td>
-<td style="text-align:center">有活力的亮色</td>
-</tr>
-<tr>
-<td>MutedSwatch</td>
-<td style="text-align:center">柔和的颜色</td>
-</tr>
-<tr>
-<td>DarkMutedSwatch</td>
-<td style="text-align:center">柔和的暗色</td>
-</tr>
-<tr>
-<td>LightMutedSwatch</td>
-<td style="text-align:center">柔和的亮色</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">////获取有活力的颜色</span></span><br><span class="line"><span class="keyword">final</span> Palette.Swatch swatch1 = palette.getDarkVibrantSwatch();</span><br><span class="line"><span class="comment">//非空判断</span></span><br><span class="line"><span class="keyword">if</span> (swatch1 != <span class="keyword">null</span>) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3、从色样中提取相应的颜色。"><a href="#3、从色样中提取相应的颜色。" class="headerlink" title="3、从色样中提取相应的颜色。"></a>3、从色样中提取相应的颜色。</h3><p>得到<code>Swatch</code>对象之后，就可以调用Swatch中的获取我们需要的颜色值。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//图片中的像素数量</span></span><br><span class="line">swatch.getPopulation()</span><br><span class="line"><span class="comment">//颜色的RBG值</span></span><br><span class="line">swatch.getRgb()</span><br><span class="line"><span class="comment">//颜色的HSL值</span></span><br><span class="line">swatch.getHsl()</span><br><span class="line"><span class="comment">//主体文字的颜色值</span></span><br><span class="line">swatch.getBodyTextColor()</span><br><span class="line"><span class="comment">//标题文字的颜色值</span></span><br><span class="line">swatch.getTitleTextColor()</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">这是从我的项目中抽出来的代码，大家可以看看</span><br><span class="line">``` java</span><br><span class="line">Glide.with(MainActivity.<span class="keyword">this</span>).load(music_pic).asBitmap().into(<span class="keyword">new</span> SimpleTarget&lt;Bitmap&gt;() &#123;</span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResourceReady</span><span class="params">(Bitmap resource, GlideAnimation&lt;? <span class="keyword">super</span> Bitmap&gt; glideAnimation)</span> </span>&#123;</span><br><span class="line">                        music_message_music_iv.setImageBitmap(resource);</span><br><span class="line">                        Palette.generateAsync(resource, <span class="keyword">new</span> Palette.PaletteAsyncListener() &#123;</span><br><span class="line">                            <span class="meta">@Override</span></span><br><span class="line">                            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onGenerated</span><span class="params">(Palette palette)</span> </span>&#123;</span><br><span class="line">                                <span class="comment">// palette为生成的调色板</span></span><br><span class="line">                                <span class="keyword">final</span> Palette.Swatch s1 = palette.getDarkVibrantSwatch();</span><br><span class="line">                                <span class="keyword">if</span> (swatch1 != <span class="keyword">null</span>) &#123;</span><br><span class="line">                                    linearLayout.setBackgroundColor(swatch1.getRgb());</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;); <span class="comment">//方法中设置asBitmap可以设置回调类型</span></span><br></pre></td></tr></table></figure></p>
-<p>以下是我的一个app中的效果图<br><img src="http://p7lhtaft4.bkt.clouddn.com/20180820_232128_songs1.jpg" alt="预览图1"><br><img src="http://p7lhtaft4.bkt.clouddn.com/20180820_232129_songs2.jpg" alt="预览图2"></p>
-
+<p><code>Palette</code>库可以从一张图片(<code>Bitmap</code>)中提取出它突出的颜色，恰巧可以达到我的需求。<br>
+        
+          <a class="article-more-a" href="/2018/08/20/Android/PaletteHelp/#more">more >></a>
+        
       
 
       
@@ -1280,15 +1234,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">json</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1304,11 +1254,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Matlab</a>
+                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1317,6 +1267,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">UI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Matlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1332,11 +1290,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1344,15 +1298,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">文件下载</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">servlet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">cookie</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">API</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1360,7 +1310,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">API</a>
+                <a href="javascript:void(0)" class="js-tag color3">servlet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件下载</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1380,11 +1334,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">生命周期</a>
+                <a href="javascript:void(0)" class="js-tag color3">Servlet</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Servlet</a>
+                <a href="javascript:void(0)" class="js-tag color5">生命周期</a>
               </li>
              
               <li class="article-tag-list-item">
