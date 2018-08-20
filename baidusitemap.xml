@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://gwrblog.top/2018/08/20/Android/PaletteHelp/</loc>
+    <lastmod>2018-08-20T15:23:39.824Z</lastmod>
+    <data>
+        <display>
+        <title>使用Palette抽取图片颜色</title>
+        <pubTime>2018-08-20T15:18:37.783Z</pubTime>
+        
+        <tag>palette</tag>
+         
+        <tag>UI</tag>
+         
+         
+           
+             
+              <breadCrumb title="安卓" url="http://gwrblog.top/categories/%E5%AE%89%E5%8D%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://gwrblog.top/2018/08/20/javaweb/JspInclude/</loc>
     <lastmod>2018-08-19T16:47:56.040Z</lastmod>
     <data>
@@ -333,9 +355,9 @@
         
         <tag>java</tag>
          
-        <tag>servlet</tag>
-         
         <tag>文件下载</tag>
+         
+        <tag>servlet</tag>
          
          
            
@@ -379,9 +401,9 @@
         <title>案例-登录错误时显示错误界面</title>
         <pubTime>2018-08-05T06:16:28.687Z</pubTime>
         
-        <tag>登录界面</tag>
-         
         <tag>servlet</tag>
+         
+        <tag>登录界面</tag>
          
          
            

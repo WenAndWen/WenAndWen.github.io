@@ -6,21 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://gwrblog.top">
-  <title>微信小程序准备与创建 | 郭小睿的博客</title>
+  <title>使用Palette抽取图片颜色 | 郭小睿的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近朋友问我，你会做微信小程序吗？">
+  <meta name="description" content="最近想实现从一张图片中，获取它的颜色，设置给其余控件，以使得 UI 页面的整体风格更加的美观和融洽。网上查询了一些资料，发现了一个Android 下比较有意思的 Support v7 库~~~ Palette库可以从一张图片(Bitmap)中提取出它突出的颜色，恰巧可以达到我的需求。 步骤1、传递一个 Bitmap，得到一个 Palette。2、获取Palette中指定的色样3、从色样中提取相应的">
+<meta name="keywords" content="palette,UI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信小程序准备与创建">
-<meta property="og:url" content="http://gwrblog.top/2018/05/02/wxxcx1/index.html">
+<meta property="og:title" content="使用Palette抽取图片颜色">
+<meta property="og:url" content="http://gwrblog.top/2018/08/20/Android/PaletteHelp/index.html">
 <meta property="og:site_name" content="郭小睿的博客">
-<meta property="og:description" content="最近朋友问我，你会做微信小程序吗？">
+<meta property="og:description" content="最近想实现从一张图片中，获取它的颜色，设置给其余控件，以使得 UI 页面的整体风格更加的美观和融洽。网上查询了一些资料，发现了一个Android 下比较有意思的 Support v7 库~~~ Palette库可以从一张图片(Bitmap)中提取出它突出的颜色，恰巧可以达到我的需求。 步骤1、传递一个 Bitmap，得到一个 Palette。2、获取Palette中指定的色样3、从色样中提取相应的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
-<meta property="og:updated_time" content="2018-06-26T08:39:31.336Z">
+<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/20180820_232128_songs1.jpg">
+<meta property="og:image" content="http://p7lhtaft4.bkt.clouddn.com/20180820_232129_songs2.jpg">
+<meta property="og:updated_time" content="2018-08-20T15:23:39.824Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信小程序准备与创建">
-<meta name="twitter:description" content="最近朋友问我，你会做微信小程序吗？">
-<meta name="twitter:image" content="http://p7lhtaft4.bkt.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
+<meta name="twitter:title" content="使用Palette抽取图片颜色">
+<meta name="twitter:description" content="最近想实现从一张图片中，获取它的颜色，设置给其余控件，以使得 UI 页面的整体风格更加的美观和融洽。网上查询了一些资料，发现了一个Android 下比较有意思的 Support v7 库~~~ Palette库可以从一张图片(Bitmap)中提取出它突出的颜色，恰巧可以达到我的需求。 步骤1、传递一个 Bitmap，得到一个 Palette。2、获取Palette中指定的色样3、从色样中提取相应的">
+<meta name="twitter:image" content="http://p7lhtaft4.bkt.clouddn.com/20180820_232128_songs1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="郭小睿的博客" type="application/atom+xml">
   
@@ -168,30 +170,38 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-wxxcx1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Android/PaletteHelp" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      微信小程序准备与创建
+      使用Palette抽取图片颜色
     </h1>
   
 
         
-        <a href="/2018/05/02/wxxcx1/" class="archive-article-date">
-  	<time datetime="2018-05-02T10:51:19.411Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
+        <a href="/2018/08/20/Android/PaletteHelp/" class="archive-article-date">
+  	<time datetime="2018-08-20T15:18:37.783Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近朋友问我，你会做微信小程序吗？<br><a id="more"></a></p>
-<hr>
-<p><img src="http://p7lhtaft4.bkt.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="流程图"></p>
-<p>作者 [郭小睿]<br>2018 年 05月 02日    </p>
+        <p>最近想实现从一张图片中，获取它的颜色，设置给其余控件，以使得 UI 页面的整体风格更加的美观和融洽。网上查询了一些资料，发现了一个Android 下比较有意思的 Support v7 库~~~</p>
+<p><code>Palette</code>库可以从一张图片(<code>Bitmap</code>)中提取出它突出的颜色，恰巧可以达到我的需求。</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>1、传递一个 Bitmap，得到一个 Palette。<br>2、获取Palette中指定的色样<br>3、从色样中提取相应的颜色。</p>
+<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><h3 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h3><p>在工程下的 build.gradle 里添加依赖才可以使用Palette,因为传递一个 Bitmap，得到一个Palette，我平常用的<code>glide</code>库加载图片，所以后面我就用glide来获取Bitmap。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">'com.android.support:palette-v7:27.1.1'</span></span><br><span class="line">implementation <span class="string">'com.github.bumptech.glide:glide:3.6.1'</span></span><br></pre></td></tr></table></figure>
+<h3 id="1、获取Palette对象"><a href="#1、获取Palette对象" class="headerlink" title="1、获取Palette对象"></a>1、获取Palette对象</h3><p>获取Palette对象有<code>同步</code>和<code>异步</code>两种方式，建议使用异步获取Palette对象。</p>
+<h4 id="同步获取"><a href="#同步获取" class="headerlink" title="同步获取"></a>同步获取</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Palette palette = Palette.from(bitmap).generate();</span><br></pre></td></tr></table></figure>
+<p>####异步获取<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Palette.from(bitmap).generate(<span class="keyword">new</span> Palette.PaletteAsyncListener() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onGenerated</span><span class="params">(Palette palette)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;   </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="2、获取Palette生成的色样"><a href="#2、获取Palette生成的色样" class="headerlink" title="2、获取Palette生成的色样"></a>2、获取Palette生成的色样</h3><p>可以获取到以下几种色样，但是有的时候获取不到对应的色样对象，<strong>必须注意非空判断。</strong><br>| 色样| 颜色|<br>| ———- |:———–:|<br>|DominantSwatch|最突出的颜色|<br>|VibrantSwatch|有活力的颜色|<br>|DarkVibrantSwatch|有活力的暗色|<br>|LightVibrantSwatch|有活力的亮色|<br>|MutedSwatch|柔和的颜色|<br>|DarkMutedSwatch|柔和的暗色|<br>|LightMutedSwatch|柔和的亮色|</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">////获取有活力的颜色</span></span><br><span class="line"><span class="keyword">final</span> Palette.Swatch swatch1 = palette.getDarkVibrantSwatch();</span><br><span class="line"><span class="comment">//非空判断</span></span><br><span class="line"><span class="keyword">if</span> (swatch1 != <span class="keyword">null</span>) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3、从色样中提取相应的颜色。"><a href="#3、从色样中提取相应的颜色。" class="headerlink" title="3、从色样中提取相应的颜色。"></a>3、从色样中提取相应的颜色。</h3><p>得到<code>Swatch</code>对象之后，就可以调用Swatch中的获取我们需要的颜色值。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//图片中的像素数量</span></span><br><span class="line">swatch.getPopulation()</span><br><span class="line"><span class="comment">//颜色的RBG值</span></span><br><span class="line">swatch.getRgb()</span><br><span class="line"><span class="comment">//颜色的HSL值</span></span><br><span class="line">swatch.getHsl()</span><br><span class="line"><span class="comment">//主体文字的颜色值</span></span><br><span class="line">swatch.getBodyTextColor()</span><br><span class="line"><span class="comment">//标题文字的颜色值</span></span><br><span class="line">swatch.getTitleTextColor()</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">这是从我的项目中抽出来的代码，大家可以看看</span><br><span class="line">``` java</span><br><span class="line">Glide.with(MainActivity.<span class="keyword">this</span>).load(music_pic).asBitmap().into(<span class="keyword">new</span> SimpleTarget&lt;Bitmap&gt;() &#123;</span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResourceReady</span><span class="params">(Bitmap resource, GlideAnimation&lt;? <span class="keyword">super</span> Bitmap&gt; glideAnimation)</span> </span>&#123;</span><br><span class="line">                        music_message_music_iv.setImageBitmap(resource);</span><br><span class="line">                        Palette.generateAsync(resource, <span class="keyword">new</span> Palette.PaletteAsyncListener() &#123;</span><br><span class="line">                            <span class="meta">@Override</span></span><br><span class="line">                            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onGenerated</span><span class="params">(Palette palette)</span> </span>&#123;</span><br><span class="line">                                <span class="comment">// palette为生成的调色板</span></span><br><span class="line">                                <span class="keyword">final</span> Palette.Swatch s1 = palette.getDarkVibrantSwatch();</span><br><span class="line">                                <span class="keyword">if</span> (swatch1 != <span class="keyword">null</span>) &#123;</span><br><span class="line">                                    linearLayout.setBackgroundColor(swatch1.getRgb());</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;); <span class="comment">//方法中设置asBitmap可以设置回调类型</span></span><br></pre></td></tr></table></figure></p>
+<p>以下是我的一个app中的效果图<br><img src="http://p7lhtaft4.bkt.clouddn.com/20180820_232128_songs1.jpg" alt="预览图1"><br><img src="http://p7lhtaft4.bkt.clouddn.com/20180820_232129_songs2.jpg" alt="预览图2"></p>
 
       
 
@@ -231,13 +241,28 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">palette</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">UI</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/wx小程序//" class="article-tag-list-link color1">wx小程序</a>
+        			<a href="/categories/安卓//" class="article-tag-list-link color3">安卓</a>
         		</li>
       		
 		</ul>
@@ -292,7 +317,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://gwrblog.top/2018/05/02/wxxcx1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://gwrblog.top/2018/08/20/Android/PaletteHelp/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -306,18 +331,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/02/wxxcx2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          微信小程序项目结构
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/04/30/html1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HTML基础</div>
+    <a href="/2018/08/20/javaweb/JspInclude/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Jsp的标签之include</div>
       <i class="icon-circle-right"></i>
     </a>
   
